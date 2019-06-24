@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			/*图片水平垂直居中*/
+			html,body{
+				height: 100%;
+			}
+			body{
+				text-align: center;
+			}
+			body:after{
+				content: "";
+				display: inline-block;
+				height: 100%;
+				vertical-align: middle;
+			}
+			img{
+				vertical-align: middle;
+				-webkit-box-reflect: right 10px;
+			}
+			/*img{
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+			}*/
+			
+		</style>
+	</head>
+	<body>
+		<img src="img/1_Y_단체.jpg" width="350" height="300"/>
+	</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>全局变量和局部变量重名问题</title>
+		<script type="text/javascript">
+			var name="张三";
+			function showInfo()
+			{
+				var name="李四";
+				document.write(name+"<br>");
+			}
+			showInfo();
+			document.write(name);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

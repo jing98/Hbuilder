@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body{
+				height: 100%;
+				overflow: hidden;
+			}
+			#test{
+				/*默认情况下背景图片是从padding-box开始绘制*/
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				width: 300px;
+				height: 300px;
+				border: 30px solid rgba(0,0,0,.2);
+				padding: 50px;
+				background-color:pink;
+				background-repeat: repeat;
+				background-image: url(img/BTS.jpg);
+				background-origin:border-box;
+				background-clip: border-box;
+				/*背景图片按照文字来剪切*/
+				/*-webkit-background-clip: text;*/
+				text-align: center;
+				font: bold 50px/300px "微软雅黑";
+				color: rgba(0,0,0,.3);
+				background-size: 100% 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="test">
+			防弹少年团
+		</div>
+	</body>
+</html>

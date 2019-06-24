@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>过渡</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html{
+				height: 100%;
+			}
+			body{
+				width: 60%;
+				height: 60%;
+				border: 1px solid;
+				margin: 120px auto 0;
+				
+			}
+			#test{
+				width: 100px;
+				height: 100px;
+				/*border-radius: 50%;*/
+				background: pink;
+				text-align: center;
+				/*font: 50px/200px "微软雅黑";*/
+				/*font: 30px/100px "微软雅黑";*/
+				
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				
+				/*过渡*/
+				/*transition: 2s;*/
+				
+				/*transition-property:width,height ;*/
+				/*
+				 * 默认值是all，
+				      可被动画的属性：https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_animated_properties
+				 * */
+				/*transition-property: all;*/
+				/*transition-property: width;*/
+				
+				/*
+				 * 周期列表不够属性列表的话，周期列表值是复制的
+				 * 值可为s和ms，一定要带单位
+				 * 不能写0，如果写0，可能导致整个过渡机制失效：当值是列表时，其中有一个写0，整个过渡机制就会失效
+				 * */
+				/*transition-duration: 10s;*/
+				
+				/*
+				     1、ease：（加速然后减速）默认值，ease函数等同于贝塞尔曲线(0.25, 0.1, 0.25, 1.0).
+			         2、linear：（匀速），linear 函数等同于贝塞尔曲线(0.0, 0.0, 1.0, 1.0).
+			         3、ease-in：(加速)，ease-in 函数等同于贝塞尔曲线(0.42, 0, 1.0, 1.0).
+			         4、ease-out：（减速），ease-out 函数等同于贝塞尔曲线(0, 0, 0.58, 1.0).
+			         5、ease-in-out：（加速然后减速），ease-in-out 函数等同于贝塞尔曲线(0.42, 0, 0.58, 1.0)
+			         6、cubic-bezier： 贝塞尔曲线
+			         7、step-start：等同于steps(1,start)
+			              step-end：等同于steps(1,end)
+			               steps(<integer>,[,[start|end]]?)
+			                      第一个参数：必须为正整数，指定函数的步数
+			                      第二个参数：指定每一步的值发生变化的时间点（默认值end）
+				 * */
+				/*transition-timing-function: linear;*/
+				
+				/*开始时的延迟时间*/
+				/*transition-delay:3s;*/
+				
+				/*多个属性值：第一个时间值是周期时间，第二个时间值是延迟时间*/
+				transition: 2s 3s width,3s height;
+			}
+			body:hover #test{
+				width: 300px;
+				height: 300px;
+				/*height: 100px;*/
+				/*font: 30px/100px "微软雅黑";*/
+				/*background: aqua;*/
+			}
+		</style>
+	</head>
+	<body>
+		<div id="test">
+			
+		</div>
+	</body>
+</html>

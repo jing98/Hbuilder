@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>实例：二维数组</title>
+		<script type="text/javascript">
+			/*
+			 * 二维数组，就得用两层循环来实现，也就是说循环套循环
+			 * 二维数组的循环，与二维表格的循环一摸一样
+			 * 二维数组的访问，数组名后跟多个连续的中括号[],第一个[]代表第一维数组，第二个[]代表第二维数组
+			 */
+			var arr=[
+						["周更生","男",30,true,,5000],
+						["刘晓庆","女",26,false,"研究生",8000],
+						["习近平","男",38,true,"博士",1000],
+						["李克强","男",34,true,"研究生",11000]
+					];
+			var str="<table width=500 border=1 rules=all align=center>";
+			for(var i=0;i<arr.length;i++)
+			{
+				str+="<tr>";
+				//j小于小数组的长度
+				for(var j=0;j<arr[i].length;j++)
+				{
+					str+="<td>"+arr[i][j]+"</td>";
+				}
+				str+="</tr>";
+			}
+			str+="</table>";
+			document.write(str);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

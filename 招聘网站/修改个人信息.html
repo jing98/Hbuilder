@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>修改个人信息</title>
+		<link rel="stylesheet" href="css/修改个人信息.css" />
+	</head>
+
+	<body>
+		<div id="header">
+			<img src="images/logo.png" />
+			<p>&nbsp;&nbsp;
+				<font face="微软雅黑" size="6">|</font>&nbsp;&nbsp;
+				<font face="微软雅黑" size="6">修改个人信息</font>
+			</p>
+			<ul>
+				<li>
+					<p>
+						<font face="微软雅黑" size="3">客户服务热线：</font>&nbsp;
+						<font face="微软雅黑" size="3">400-855-9626</font>
+					</p>
+				</li>
+			</ul>
+		</div>
+		<br />
+		<hr color="#BBBBBB" style="height: 5px;" width="100%">
+		<div id="gll">
+			<a href="login.html">退出</a>
+			<a href="浏览招聘信息.html">返回上一页</a>
+			<a href="修改个人信息.html">修改个人信息</a>
+			<a href="我的简历.html">我的简历</a>
+			<a href="浏览招聘信息">岗位浏览</a>
+			<a href="login.html">首页</a>
+		</div>
+		<div class="tit" align="center">
+			<h1>修改个人信息</h1>
+		</div>
+		<div id="main">
+			<!-- 一条记录 开始 -->
+			<table class="myInfo" align="center">
+				<tr>
+					<th>姓名：</th>
+					<td>
+						<input type="text" name="name" value="王小明" />
+					</td>
+				</tr>
+				<tr>
+					<th>性别：</th>
+					<td>
+						<input type="radio" name="Sex" checked="checked" value="male" />男
+						<input type="radio" name="Sex" value="female" />女
+					</td>
+
+				</tr>
+				<tr>
+					<th>年龄：</th>
+					<td>
+						<input type="text" name="age" value="22" />
+					</td>
+				</tr>
+				<tr>
+					<th>出生日期：</th>
+					<td>
+						<select name="year" id="select">
+							<option>1990年</option>
+							<option>1991年</option>
+							<option>1992年</option>
+							<option>1993年</option>
+							<option>1994年</option>
+							<option>1995年</option>
+							<option>1996年</option>
+							<option selected="selected">1997年</option>
+							<option>1998年</option>
+							<option>1999年</option>
+							<option>2000年</option>
+						</select>
+						-
+						<select name="mouth" id="select">
+							<option>1月</option>
+							<option>2月</option>
+							<option selected="selected">3月</option>
+							<option>4月</option>
+							<option>5月</option>
+							<option>6月</option>
+							<option>7月</option>
+							<option>8月</option>
+							<option>9月</option>
+							<option>10月</option>
+							<option>11月</option>
+							<option>12月</option>
+						</select>
+						-
+						<select name="day" id="select">
+							<option>1日</option>
+							<option>2日</option>
+							<option>3日</option>
+							<option selected="selected">4日</option>
+							<option>5日</option>
+							<option>6日</option>
+							<option>7日</option>
+							<option>8日</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th>参加工作时间：</th>
+					<td>
+						<select name="year" id="select">
+							<option>2010年</option>
+							<option>2011年</option>
+							<option>2012年</option>
+							<option>2013年</option>
+							<option>2014年</option>
+							<option>2015年</option>
+							<option>2016年</option>
+							<option>2017年</option>
+							<option selected="selected">2018年</option>
+							<option>2019年</option>
+						</select>
+						-
+						<select name="mouth" id="select">
+							<option>1月</option>
+							<option>2月</option>
+							<option>3月</option>
+							<option>4月</option>
+							<option selected="selected">5月</option>
+							<option>6月</option>
+							<option>7月</option>
+							<option>8月</option>
+							<option>9月</option>
+							<option>10月</option>
+							<option>11月</option>
+							<option>12月</option>
+						</select>
+						-
+						<select name="day" id="select">
+							<option>1日</option>
+							<option selected="selected">2日</option>
+							<option>3日</option>
+							<option>4日</option>
+							<option>5日</option>
+							<option>6日</option>
+							<option>7日</option>
+							<option>8日</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th>户籍：</th>
+					<td>
+						<select name="select1" id="select">
+							<option selected="selected">河南省</option>
+							<option>河北省</option>
+							<option>陕西省</option>
+							<option>福建省</option>
+							<option>广东省</option>
+							<option>广西省</option>
+							<option>湖南省</option>
+						</select>
+						-
+						<select name="select2" id="select">
+							<option>郑州市</option>
+							<option>驻马店市</option>
+							<option selected="selected">南阳市</option>
+							<option>安阳市</option>
+							<option>信阳市</option>
+							<option>三门峡市</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th>现居地：</th>
+					<td>
+						<select name="select1" id="select">
+							<option selected="selected">河南省</option>
+							<option>河北省</option>
+							<option>陕西省</option>
+							<option>福建省</option>
+							<option>广东省</option>
+							<option>广西省</option>
+							<option>湖南省</option>
+						</select>
+						-
+						<select name="select2" id="select">
+							<option>郑州市</option>
+							<option>驻马店市</option>
+							<option selected="selected">南阳市</option>
+							<option>安阳市</option>
+							<option>信阳市</option>
+							<option>三门峡市</option>
+						</select>
+						-
+						<select name="select3" id="select">
+							<option selected="selected">南阳理工学院</option>
+							<option>南阳师范学院</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th>学历：</th>
+					<td>
+						<select name="select1" id="select">
+							<option>高中</option>
+							<option>专科</option>
+							<option selected="selected">本科</option>
+							<option>研究生</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th>联系方式：</th>
+					<td>
+						<input type="text" name="phone" value="13246583997" />
+					</td>
+				</tr>
+				<tr>
+					<th>电子邮箱：</th>
+					<td>
+						<input type="text" name="email" value="13246583997" />
+						<select name="select2" id="select2">
+							<option selected="selected">@163.com</option>
+							<option>@qq.com</option>
+						</select>
+					</td>
+				</tr>
+			</table>
+			<div id="d2" align="center">
+				<a href="个人档案.html">保存并更新</a>
+				<a href="修改个人信息.html">取消</a>
+			</div>
+		</div>
+		<div id="f1">Copyright 2012 itmag.com All rights reserved. | 苏ICP备12067872号 </div>
+	</body>
+
+</html>

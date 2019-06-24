@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>三角叠放法制作三角指示器</title>
+		<style type="text/css">
+			body{
+				padding: 100px;
+			}
+			.round_rect{
+				margin-left: 50px;
+				width: 300px;
+				min-height: 100px;
+				border: 2px solid black;
+				border-radius: 5px;
+				background-color: blueviolet;
+				position: relative;
+			}
+			.round_rect:before{
+				content: "";
+				border-width: 20px 20px 20px 0px;
+				border-style: solid;
+				border-color: transparent black transparent red;
+				position: absolute;
+				left: -20px;
+				top: 50%;
+				margin-top: -20px;
+			}
+			.round_rect:after{
+				content: "";
+				border-width: 20px 20px 20px 0px;
+				border-style: solid;
+				border-color: transparent blueviolet transparent red;
+				position: absolute;
+				left: -18px;
+				top: 50%;
+				margin-top: -20px;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<div class="round_rect">
+				
+			</div>
+		</div>
+
+	</body>
+
+</html>

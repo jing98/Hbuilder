@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		p{
+			color:red;
+		}
+	</style>
+	<body>
+		<p>
+			显示进度条
+		</p>
+		<progress value="52" max="100">
+			你的浏览器不支持
+		</progress>
+		<progress value="75" max="100">
+			3/4完成
+		</progress>
+		<p>
+			显示刻度
+		</p>
+		<meter value="2" max="10" min="0">
+			2/10
+		</meter>
+		<br>
+		<meter value="0.6"></meter>
+		<br>
+		<meter min="0" max="100" low="40" heigh="90" optimun="100" value="91">
+			A+
+		</meter>
+		<p>
+			显示菜单:
+		</p>
+		<menu type="toolbar">
+			<menu label="File">
+				<button type="button" onclick="file_new()">
+					新建...
+				</button>
+				<button type="button" onclick="file_open()">
+					打开...
+				</button>
+				<button type="button" onclick="file_save()">
+					保存...
+				</button>
+			</menu>
+			<menu label="Edit">
+				<button type="button" onclick="edit_cut">剪切</button>
+				<button type="button" onclick="edit_copy">拷贝</button>
+				<button type="button" onclick="edit_paste">粘贴</button>
+			</menu>
+		</menu>
+		<p>
+			显示汇总和详细
+		</p>
+		<details>
+			<summary>
+				HTML5汇总
+			</summary>
+			这是HTML5语义元素汇总
+		</details>
+	</body>
+</html>

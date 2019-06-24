@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>new flex</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#warp{
+				width: 400px;
+				height: 300px;
+				border: 1px solid;
+				margin: 100px auto;
+				
+				display: flex;
+				flex-direction: row;
+				justify-content: flex-start;
+				align-items: flex-start;
+				
+			}
+			#warp>.item{
+				width: 50px;
+				height: 50px;
+				background: pink;
+				text-align: center;
+				line-height: 50px;
+				/*
+				 * 弹性空间管理：
+				 * 		将主轴上的富裕空间按比例分配到项目上
+				 * 
+				 * flex-grow
+				 * box-flex
+				 * 		默认值都为0
+				 * 
+				 * flex-grow： 
+				 * 								没有flex-basis的话就是width
+					     可用空间 = (容器大小 - 所有相邻项目flex-basis的总和)   
+					     		400-50*5=150
+					     		
+					有flex-basis：400-50*0=400
+					     可扩展空间 = (可用空间/所有相邻项目flex-grow的总和)
+					     		150/8=18.75
+					     		
+					有flex-basis：400/8=50
+					     每项伸缩大小 = (伸缩基准值 + (可扩展空间 xflex-grow值))
+					     		50+18.75*4=125
+					     		50+18.75*1=68.75
+					     		
+					     		0+50*4=200
+					有flex-basis：0+50*1=50
+				 * */
+				flex-grow: 1;
+				flex-basis: 0;
+			}
+			#warp>.item:nth-child(1)
+			{
+				flex-grow: 4;
+			}
+</style>
+	</head>
+	<body>
+		<div id="warp">
+			<div class="item">1</div>
+			<div class="item">2</div>
+			<div class="item">3</div>
+			<div class="item">4</div>
+			<div class="item">5</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>00_引入</title>
+	</head>
+
+	<body>
+
+		<button>测试1</button>
+		<button>测试2</button>
+		<button>测试3</button>
+		<!--
+需求: 点击某个按钮, 提示"点击的是第n个按钮"
+-->
+		<script type="text/javascript">
+			var btns = document.getElementsByTagName("button");
+			//遍历加监听
+			/*
+			for (var i=0,length=btns.length;i<length;i++) {
+				var btn=btns[i];
+				btn.onclick=function(){
+					alert("第"+(i+1)+"个btn");
+				}
+			}*/
+
+			/*
+			for (var i=0,length=btns.length;i<length;i++) {
+				var btn=btns[i];
+				//将btn所对应的下标保存在btn上
+				btn.index=i;
+				btn.onclick=function(){
+					alert("第"+(this.index+1)+"个btn");
+				}
+			}
+			*/
+			
+			//利用闭包
+			for(var i = 0, length = btns.length; i < length; i++) {//i是全局的
+				(function(i) {//i是局部的
+					var btn = btns[i];//i读的是局部的
+					btn.onclick = function() {
+						alert("第" + (i + 1) + "个btn");//i引用了外部函数的形参
+					}
+				})(i)//i用得是全局的
+			}
+		</script>
+	</body>
+
+</html>

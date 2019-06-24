@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>立方体(第二版)</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#warp{
+				position: absolute;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				width: 300px;
+				height: 300px;
+				border: 1px solid;
+				
+				/*搭建3d舞台*/
+				perspective: 200px;
+				transform-style: preserve-3d;
+			}
+			#warp>.box{
+				position: absolute;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				width: 100px;
+				height: 100px;
+				
+				transform-style: preserve-3d;
+				transition: 2s;
+				transform-origin:center center -50px;
+			}
+			#warp>.box>div{
+				position: absolute;
+				width: 100px;
+				height: 100px;
+				background: rgba(123,321,213,.3);
+				font: 50px/100px "微软雅黑";
+				text-align: center;
+				
+				backface-visibility: hidden;
+				transform-origin:center center -50px;
+			}
+			#warp>.box>div:nth-child(6)
+			{
+				transform: rotateX(270deg);
+			}
+			#warp>.box>div:nth-child(5)
+			{
+				transform: rotateX(90deg);
+			}
+			#warp>.box>div:nth-child(4)
+			{
+				transform: rotateY(90deg);
+			}			
+			#warp>.box>div:nth-child(3)
+			{
+				transform: rotateY(270deg);
+			}
+			#warp>.box>div:nth-child(2)
+			{
+				transform: rotateY(180deg) rotate(180deg);
+			}
+			#warp>.box>div:nth-child(1)
+			{
+			}
+			
+			#warp:hover .box{
+				transform: rotateX(180deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="warp">
+			<div class="box">
+				<div>前</div>
+				<div>后</div>
+				<div>左</div>
+				<div>右</div>
+				<div>上</div>
+				<div>下</div>
+			</div>
+		</div>
+	</body>
+</html>

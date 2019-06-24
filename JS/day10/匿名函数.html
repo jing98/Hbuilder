@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>匿名函数</title>
+		<script type="text/javascript">
+			/*
+			 * 匿名函数：没有名字的函数
+			 * 不能单独定义，不能单独调用
+			 * 一般是作为数据给其他变量赋值，可以给普通变量、数组元素、对象的属性赋值
+			 */
+			var a=10;			//将数值赋给变量a，那么变量a就是“数值型”变量
+			var a="abc";		//“字符型”变量
+			var a=true;			//“布尔型”变量
+			var a=[10,20];		//“复合型/数组型”变量
+			var a=function(name,age){	//“函数型”变量
+				window.alert(name+"的年龄是"+age+"岁！");
+			};	
+			//调用函数
+			a("张三",24);
+			//alert(typeof a);
+			var b=a;		//将变量a的地址“拷贝”一份传给了变量b
+			b("李四",30);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

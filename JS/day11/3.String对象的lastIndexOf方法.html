@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>判断以下文件名是不是图片</title>
+		<script type="text/javascript">
+			var arr=["jpg","png","gif"];
+			var filename="2019.3.2.gif";   //假设是上传文件名
+			//先找到文件扩展名前的小点
+			var index=filename.lastIndexOf(".");
+			//取出扩展名
+			var ext=filename.substr(index+1);
+			//循环数组，比较扩展名是否合法
+			var flag=false;			//标志
+			for (var i=0;i<arr.length;i++) 
+			{
+				if(ext==arr[i])
+				{
+					flag=true;
+					break;			//退出循环
+				}	
+			}
+			//判断flag的值
+			if(flag)
+			{
+				document.write("<font color=blue>合法！</font>");
+			}
+			else
+			{
+				document.write("<font color=red>不合法！</font>");	
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

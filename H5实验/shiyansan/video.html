@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>自定义播放器</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<style type="text/css">
+				.video_container{
+				background-color: black;
+				width: 400px;
+				padding: 10px;
+			}
+			.video_control{
+				color: white;
+			}
+			.video_control .fl{
+				float: left;
+			}
+			.video_control .fr{
+				float: right;
+			}
+			/*一旦元素浮动后，不会父亲的高*/
+			.video_control:after{
+				content: "";
+				display: block;
+				clear: both;/*撑大父亲*/
+			}
+			.video_progress{
+				background-color: white;
+				height: 10px;
+				margin-bottom: 2px;
+			}
+			.video_progress .in{
+				background-color: blue;
+				height: 10px;
+				width: 0px;
+			}
+		
+		</style>
+	</head>
+	<body>
+			<!--
+			div+css
+			这个是播放器容器
+		-->
+		<div class="video_container">
+			<!--播放器-->
+			<div class="video_palyer">
+				<video width="400" height="300">
+					<source src="1.mp4" type="video/mp4"></source>
+					<source src="1.ogg" type="video/ogg"></source>
+					<source src="1.webm" type="video/webm"></source>
+					<object width="" height="" type="application/x-shockwave-flash" data="video/nyist.swf">
+				<param name="movie" value="video/nyist.swf" />
+				<param name="flashvars" value="autostart=true&amp;file=video/nyist.swf" />
+			</object> 当前浏览器不支持 video直接播放，点击这里下载视频：
+					<a href="1.webm">下载视频</a>
+				</video>
+			</div>
+			<!--进度条-->
+			<div class="video_progress">
+              <div class="in" title="xiaosb"></div>
+			</div>
+			<!--进度条-->
+			<div class="video_control">
+				<!--
+                	左边控件组
+                -->
+				<div class="fl">
+                       <span class="icon-play3"></span>
+				</div>
+				<!--
+                	右边控件组
+                -->
+				<div class="fr">
+                    <span class="icon-volume-increase" ></span>
+                    <span class="icon-volume-decrease"></span>
+                    <span class="icon-enlarge"></span>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var palyBtn=document.querySelector(".fl .icon-play3");
+			 var vid=document.querySelector(".video_container .video_palyer video");
+			 var vbig=document.querySelector(".fr .icon-volume-increase");
+			 var vsmall=document.querySelector(".fr .icon-volume-decrease");
+			 var  pin=document.querySelector(".video_progress .in");
+			 palyBtn.addEventListener("click",function(e){
+			 	if (vid.paused) {
+			 		vid.play();
+			 		palyBtn.className="icon-pause2";
+			 	} else{
+			 		vid.pause();
+			 		palyBtn.className="icon-play3";
+			 	}
+			 });
+			 vsmall.addEventListener("click",function(event){
+			 	vid.volume-=0.1;
+			 });
+			 vbig.addEventListener("click",function(event){
+			 	vid.volume+=0.1;
+			 });
+			 vid.addEventListener("timeupdate",function(event){
+			 	pin.style.width=100*vid.currentTime/vid.duration+"%";
+			 });
+		
+		</script>
+	</body>
+</html>

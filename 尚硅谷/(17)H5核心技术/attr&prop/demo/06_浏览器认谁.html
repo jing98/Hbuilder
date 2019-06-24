@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+	</head>
+
+	<body>
+		<input type="checkbox" name="tjg" />
+		<input type="button" value="test" />
+
+	</body>
+	<script type="text/javascript">
+		//浏览器只认property
+		var tjg = document.querySelector("input[type=checkbox]");
+		var btn = document.querySelector("input[type=button]")
+		btn.onclick = function() {
+			debugger;
+			tjg.checked = true;
+		}
+	</script>
+
+</html>

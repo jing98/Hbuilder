@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--
+			attribute:
+				html预定义属性 
+				html自定义属性 
+		-->
+	</head>
+
+	<body>
+		<input type="checkbox" checked="checked" tjg="tjg" />
+	</body>
+	<script type="text/javascript">
+		/*
+		 * 开启 debugger ，调试模式下代码会在 debugger 处停止执行。 
+		 */
+		debugger;
+		/*
+		 * 文档对象模型Document引用的querySelector()方法返回文档中与指定选择器或选择器组匹配的第一个 html元素Element。
+		       如果找不到匹配项，则返回null。
+		*/
+		var tjg = document.querySelector("input[type=checkbox]");
+	</script>
+
+</html>

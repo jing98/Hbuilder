@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>实例：求两个整数之间的随机整数</title>
+		<meta http-equiv="refresh" content="1" />
+		<script type="text/javascript">
+		//定义随机数的函数
+		function getRandom(min,max)
+		{
+			//求随机整数
+			var random=Math.random()*(max-min)+min;
+			//向下取整
+			random=Math.floor(random);
+			document.write(random+"<hr>");
+		}
+		//调用函数
+		getRandom(0,10);
+		getRandom(10,20);
+		getRandom(20,30);
+		getRandom(7,91);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

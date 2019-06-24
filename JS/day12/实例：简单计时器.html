@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>实例：简单计时器</title>
+		<script type="text/javascript">
+			//全局变量
+			var i=0;
+			var timer;
+			function start2(){
+				//获取id=result的<input>元素对象 
+				var inputObj=document.getElementById("result");
+				inputObj.value="该程序已经运行了"+i+"秒!";
+				i++;
+				//延时器
+				//延时器要想实现重复执行，必须在函数中不断的调用自己
+				//这个实现后，延时器就可以模拟定时器的效果了
+				 timer=window.setTimeout("start2()",100);
+			}
+			function stop2(){
+				window.clearTimeout(timer);
+			}
+		</script>
+	</head>
+	<body>
+		<input id="result" type="button" value="该程序已经运行了0秒!" onclick="" /><br />
+		<input type="button" value="开始" onclick="start2()"/>
+		<input type="button" value="停止" onclick="stop2()"/>
+	</body>
+</html>

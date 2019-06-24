@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div class="mydiv" ondragover="handleDragover(event)" ondrop="handleDrop(event)">
+		</div>
+		<script type="text/javascript">
+			function handleDragover(event) {
+				event.preventDefault(); 
+				event.stopPropagation();
+			}
+			function handleDrop(event) {
+				event.preventDefault(); 
+				event.stopPropagation();
+				console.dir(event.dataTransfer.files);
+				for(var i = 0; i < event.dataTransfer.files.length; i++) {
+					var img = new Image();
+					img.src = URL.createObjectURL(event.dataTransfer.files[i]);
+					event.target.appendChild(img);
+				}
+			}
+		</script>
+	</body>
+
+</html>

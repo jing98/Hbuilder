@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>径向渐变:背景图片</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#test{
+				width: 400px;
+				height: 300px;
+				border: 1px solid;
+				margin: 0 auto;
+				/*默认形状是椭圆*/
+				/*background-image: radial-gradient(red 10%,yellow 30%,pink 70%);*/
+				
+				/*改变默认形状*/
+				/*background-image: radial-gradient(circle,red 10%,yellow 30%,pink 70%);*/
+				
+				/*改变默认的按斜边分布,就是改变默认形状
+				 * 最近边：closest-side
+				 * 最远边：farthest-side
+				 * 最近角：closest-corner
+				 * 最远角：farthest-corner(默认值)
+				 * */
+				/*background-image: radial-gradient(closest-side circle,red,yellow 50%,pink);*/
+				
+				/*改变圆心*/
+				background-image: radial-gradient(closest-corner circle at 30px 30px ,red,yellow 60%,#00BFFF);
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div id="test">
+			
+		</div>
+	</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>实例：随机显示小星星</title>
+		<script type="text/javascript">
+		/*
+			1.网页背景色为黑色
+			2.创建图片节点，追加到<body>父节点
+			3.图片随机大小
+			4.图片随机定位坐标(x,y)
+			5.定时器
+			6.网页加载完成，星星开始显示
+			7.星星显示的范围，跟窗口的宽高一样  :(0,window.innerWidth)
+			8.单击星星，星星消失：删除子节点removeChild(elementObj)
+		* */
+		
+		//网页加载完成,有名函数（传的是函数的地址，不加括号）或者是匿名函数
+		window.onload=function(){
+			//更改网页背景色
+			document.body.bgColor="#000";
+			//定时器，1秒钟，显示一个星星
+			window.setInterval("star()",1000);
+		}
+		//动画主函数
+		function star(){
+			//创建图片节点
+			var imgObj=document.createElement("img");
+			//添加src属性
+			imgObj.setAttribute("src","img/xingxing2.png");
+			//添加width属性,getRandom()求随机数函数
+			var width=getRandom(15,85);
+			imgObj.setAttribute("width",width);
+			//添加style属性(行内样式)
+			var x=getRandom(0,window.innerWidth) ;
+			var y=getRandom(0,window.innerHeight) ;
+			imgObj.setAttribute("style","position: absolute;left:"+ x+"px;top:"+ y+"px;")
+			
+			//添加onclick事件属性
+			/*
+			 * this代表当前对象，this是一个对象
+			   this是系统关键字，只能在函数内使用
+			 * */
+			imgObj.setAttribute("onclick","removeImg(this)");
+			//将图片节点挂载到<body>父节点下
+			document.body.appendChild(imgObj);
+		}
+		//函数：求随机数函数
+		function getRandom(min,max){
+			//随机数 
+			var random=Math.random()*(max-min)+min;
+			//向下取整
+			random=Math.floor(random);
+			return random;
+		}
+		//删除节点函数
+		function removeImg(obj){
+			document.body.removeChild(obj);
+		}
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

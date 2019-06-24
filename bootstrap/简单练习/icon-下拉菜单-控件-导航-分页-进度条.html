@@ -1,0 +1,131 @@
+<!--
+	作者：offline
+	时间：2018-11-23
+	描述：图标库网址
+	https://v3.bootcss.com/components/#glyphicons
+	http://www.iconfont.cn/
+-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>icon-下拉菜单-控件-导航-分页-进度条</title>
+		<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+		<script type="text/javascript" src="bootstrap-3.3.7-dist/js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+		<style>
+			.glyphicon-asterisk {
+				color: greenyellow;
+				font-size: 100px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<span class="glyphicon glyphicon-asterisk"></span>
+		<button class="btn btn-default">
+			<span class="glyphicon glyphicon-star">
+				这是一个按钮
+		</button>
+		<br><br>
+		<!--
+        	作者：offline
+        	时间：2018-11-23
+        	描述：下拉菜单
+        	.dropdown控制组件为下拉
+        	.dropdown-menu-right代替.pull-right右对齐
+        	divider分割线
+        -->
+		<div class="dropdown">
+			<button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        		这是按钮
+        		<span class="caret"></span>
+        	</button>
+			<ul class="dropdown-menu">
+				<li>
+					<a href="http://www.imooc.com">
+						慕课网
+					</a>
+				</li>
+				<li>
+					<a href="http://www.imooc.com">
+						慕课网
+					</a>
+				</li>
+				<li>
+					<a href="http://www.imooc.com">
+						慕课网
+					</a>
+				</li>
+			</ul>
+		</div>
+		<br><br>
+		<!--
+        	作者：offline
+        	时间：2018-11-23
+        	描述：控件组
+        	.input-group表示控件组
+        	.input-group-addon可放置额外内容及图标
+        -->
+	</body>
+	<div class="input-group">
+		<span class="input-group-addon">姓名：</span>
+		<input type="text" class="form-control" />
+	</div>
+	<br><br>
+	<!--
+    	作者：offline
+    	时间：2018-11-23
+    	描述：导航
+    	class.nav无序列表开始
+    	.nav-tabs代表可切换的导航
+    	.nav-pills代表胶囊导航
+    	.nav-justified使导航垂直
+    -->
+	<ul class="nav nav-tabs">
+		<li class="active"><a href="http://www.imooc.com">慕课网</a></li>
+		<li><a href="http://www.imooc.com">慕课网</a></li>
+		<li><a href="http://www.imooc.com">慕课网</a></li>
+	</ul>
+	<ul class="nav nav-pills nav-stacked">
+		<li class="active"><a href="http://www.imooc.com">慕课网</a></li>
+		<li><a href="http://www.imooc.com">慕课网</a></li>
+		<li><a href="http://www.imooc.com">慕课网</a></li>
+	</ul>
+	<br><br>
+	<!--
+    	作者：offline
+    	时间：2018-11-23
+    	描述：分页
+    	.pagination在父元素中添加表示分页
+    	.pager放置在翻页区域
+    	.previous把链接向左对齐,.next把链接向右对齐
+    -->
+    <nav>
+    	<ul class="pager">
+    		<li class="previous"><a href="http://www.imooc.com">向左</a></li>
+    		<li class="next"><a href="http://www.imooc.com">向右</a></li>
+    	</ul>
+    	<ul class="pagination pagination">
+    		<li class="active"><a href="http://www.imooc.com">1</a></li>
+    		<li><a href="http://www.imooc.com">2</a></li>
+    		<li><a href="http://www.imooc.com">3</a></li>
+			<li><a href="http://www.imooc.com">4</a></li>
+    	</ul>
+    </nav>
+    <br><br>
+    <!--
+    	作者：offline
+    	时间：2018-11-23
+    	描述：进度条
+    	.progress表示进度条
+    	通过状态类改变进度条颜色：danger、warning、error、success、info、active
+    	.progress-bar-striped使得进度条颜色渐变
+    -->
+    <div class="progress">
+    	<div class="progress-bar progress-bar-danger progress-bar-striped" style="width:60%;">
+    		60%
+    	</div>
+    </div>
+</html>

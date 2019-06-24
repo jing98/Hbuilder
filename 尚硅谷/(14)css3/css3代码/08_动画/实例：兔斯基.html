@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>实例：兔斯基</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body{
+				height: 100%;
+				overflow: hidden;
+			}
+			#tsj{
+				position: absolute;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				margin:auto;
+				width: 48px;
+				height: 48px;
+				background: url(img/animation.png);
+				background-position: 0 0;
+				/*steps(12,end)   end看不见最后一帧，start看不见第一帧
+				 动画总共有13帧，最后一帧是空白
+				 走了12步，因为end看不见最后一帧
+				 * */
+				animation: move .8s steps(12,end) infinite;
+			}
+			@keyframes move{
+				from{
+					background-position: 0 0;
+				}
+				to{
+					background-position: -576px 0;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="tsj">
+			
+		</div>
+		
+	</body>
+</html>

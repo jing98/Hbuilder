@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+	</head>
+
+	<body>
+		<input type="checkbox" checked="checked" name="tjg" />
+	</body>
+	<script type="text/javascript">
+		/*
+		 * 布尔值属性:你的property是布尔值类型
+		 * 非布尔值属性:你的property是非布尔值类型
+		 */
+
+		//非布尔值属性:property和attribute同步问题
+		//不管什么情况，property和attribute都会同步
+		var tjg = document.querySelector("input[type=checkbox]");
+		debugger;
+		tjg.setAttribute("name", "tjg1")
+		tjg.setAttribute("name", "tjg2")
+		tjg.setAttribute("name", "tjg3")
+
+		tjg.name = "tjg4";
+		tjg.name = "tjg5"
+		tjg.name = "tjg6"
+
+		tjg.setAttribute("name", "tjg7 ")
+		tjg.setAttribute("name", "tjg8")
+		tjg.setAttribute("name", "tjg9")
+	</script>
+
+</html>

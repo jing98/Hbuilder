@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>过渡：时钟</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#warp{
+				/*position: absolute;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;*/
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin-left: -100px;
+				margin-top: -100px;
+				
+				width: 200px;
+				height: 200px;
+				border: 1px solid;
+				border-radius: 50%;
+			}
+			ul{
+				list-style: none;
+			}
+			ul>li{
+				position: absolute;
+				left: 99px;
+				top: 0;
+				
+				width: 2px;
+				height: 10px;
+				background: black;
+				/*改变基点变为圆的中心点*/
+				transform-origin: center 100px; 
+			}
+			ul>li:nth-child(5n+1)
+			{
+				/*第1，6个长度变长*/
+				height: 15px;
+			}
+			#warp>.hour{
+				position: absolute;
+				left: 97px;
+				top: 70px;
+				
+				width: 6px;
+				height: 30px;
+				background: black;
+				transform-origin: center bottom;
+			}
+			#warp>.min{
+				position: absolute;
+				left: 98px;
+				top: 50px;
+				
+				width: 4px;
+				height: 50px;
+				background: gray;
+				transform-origin: center bottom;
+			}
+			#warp>.sec{
+				position: absolute;
+				left: 99px;
+				top: 30px;
+				
+				width: 2px;
+				height: 70px;
+				background: red;
+				transform-origin: center bottom;
+			}
+			#warp>.icon{
+				position: absolute;
+				left: 90px;
+				top: 90px;
+				
+				width: 20px;
+				height: 20px;
+				background: pink;
+				border-radius: 50%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="warp">
+			<ul></ul>
+			<div class="hour"></div>
+			<div class="min"></div>
+			<div class="sec"></div>
+			<div class="icon"></div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		window.onload=function(){
+			var hourNode=document.querySelector("#warp>.hour");
+			var minNode=document.querySelector("#warp>.min");
+			var secNode=document.querySelector("#warp>.sec");
+			
+			
+			var ulNode=document.querySelector("#warp > ul")
+			/*var styleNode=document.querySelector("#css");*/
+			var styleNode=document.createElement("style");
+			var liHtml="";
+			var cssText="";
+			for(var i=0;i<60;i++)
+			{
+				liHtml+="<li></li>";
+				cssText+="ul>li:nth-child("+(i+1)+"){transform: rotate("+(i*6)+"deg);}"
+			}
+			/*创建60个li*/
+			ulNode.innerHTML=liHtml;
+			/*创建60个li的样式*/
+			styleNode.innerHTML+=cssText;
+			/*将styleNode追加到头部下面，这样在css样式表是链接引入时好操作*/
+			document.head.appendChild(styleNode);
+			
+			move()
+			setInterval(move,1000);
+			function move(){
+				var date=new Date();
+				
+				var s=date.getSeconds();
+				var m=date.getMinutes()+s/60;
+				var h=date.getHours()+m/60;
+
+				hourNode.style.transform="rotate("+(30*h)+"deg)";
+				minNode.style.transform="rotate("+(6*m)+"deg)";
+				secNode.style.transform="rotate("+(6*s)+"deg)";
+			}
+		
+		}
+	</script>
+</html>

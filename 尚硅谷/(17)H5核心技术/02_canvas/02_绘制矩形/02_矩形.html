@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		html,body{
+			height: 100%;
+			overflow: hidden;
+		}
+		body{
+			background: pink;
+		}
+		#test{
+			background: gray;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			}
+	</style>
+</head>
+<body>
+	<!--canvas初始化宽度为300像素和高度为150像素-->
+	<canvas id="test" width="300" height="300">
+		<span>
+			您的浏览器不支持画布元素，请您换成萌萌的谷歌浏览器
+		</span>
+	</canvas>
+</body>
+<script type="text/javascript">
+	window.onload=function(){
+		//1.拿到画布
+		var canvas=document.getElementById("test");
+		//<canvas> 元素有一个叫做 getContext() 的方法，这个方法是用来获得渲染上下文和它的绘画功能。
+		if(canvas.getContext){//2.检查是否有这个画布
+			var ctx=canvas.getContext("2d");
+			//样式必须放在前面，告诉的是什么颜色，下面画的时候就是什么颜色
+			ctx.fillStyle="deeppink";
+			ctx.strokeStyle="hotpink";
+			ctx.lineWidth=25;
+			/*
+			  	设定线条与线条间接合处的样式（默认是miter）
+			  	round:圆角
+			  	bevel:斜角
+			  	miter:直角
+			 * */
+			ctx.lineJoin="round";
+			
+			
+			//带边框的矩形
+			//100  :99.5---100.5(99-101)
+			//100.5:100-101
+			//画1px的边框，由于边框是偏移量向上取0.5px,向下取0.5px,但是由于css中不支持小数，所有的小数都会向上取整
+			//ctx.strokeRect(100.5,100.5,100,100);
+			ctx.strokeRect(100,100,100,100);
+			/*//注意不加单位
+			//填充的矩形
+			ctx.fillRect(0,0,100,100);
+			ctx.clearRect(100,100,100,100);*/
+		}
+			
+	}
+</script>
+</html>

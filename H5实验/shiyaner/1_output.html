@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form>
+			<p>
+				实例 #1
+			</p>
+			"range"input类型：
+			<input type="range" name="age" min="10" value="13"/>
+			<output id="ageDisplay"></output>
+			<p>
+				示例 #2
+			</p>
+			<input type="number" id="a" value=20 oninput="result.value=parseInt(a.value)+parseInt(b.value)" />
+			<input type="number" id="b" value=10 oninput="result.value=parseInt(a.value)+parseInt(b.value)"/>
+			=
+			<output name="result" value="0" for="a b"></output>
+		</form>
+	</body>
+</html>

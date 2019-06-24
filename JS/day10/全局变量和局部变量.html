@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>全局变量和局部变量</title>
+		<script type="text/javascript">
+			/*
+			 全局变量：在函数外部定义的变量，在函数内部可以使用
+			 局部变量：在函数内部定义的变量，只能在函数内部使用
+			 在函数内部，省略var关键字定义的变量是“全局变量”
+			 一般var关键字不要省略
+			 */
+			
+		/*	
+		  //全局变量:在网页关闭时，自动消失（释放空间）
+			var name="张三";
+			function showInfo()
+			{
+				//局部变量：（在函数内部定义）在函数执行完毕就消失了
+				var age=20;
+				document.write(name+"的年龄是"+age+"岁！<hr>");
+			}
+			showInfo();
+			//以下程序报错，说age变量不存在
+			//因为age变量是局部变量，函数执行完毕，局部变量就消失了
+			document.write(name+"的年龄是"+age+"岁！<hr>");
+		*/
+		/* 	
+		 	var name="张三";
+			var age;
+			function showInfo()
+			{
+			
+				age=20;		//给全局变量age赋值
+				//以下的age是全局变量
+				document.write(name+"的年龄是"+age+"岁！<hr>");
+			}
+			showInfo();
+			//以下输出正常，此时的age是全局变量
+			document.write(name+"的年龄是"+age+"岁！<hr>");
+			*/
+		   /* var name="张三";
+			var age;
+			function showInfo()
+			{
+			
+				age=20;		//给全局变量age赋值
+				//以下的age是全局变量
+				document.write(name+"的年龄是"+age+"岁！<hr>");
+			}	
+			//此时的age为undefined
+			document.write(name+"的年龄是"+age+"岁！<hr>");
+			//调用函数
+			showInfo();*/
+			/*var name="张三";
+			function showInfo()
+			{
+			
+				age=20;		//全局变量
+				document.write(name+"的年龄是"+age+"岁！<hr>");
+			}	
+			//在函数内部，省略关键字var定义的变量是“全局变量”
+			//注意：var关键字尽量别省略，省略后，“全局变量”和“局部变量”会分不清楚
+			showInfo();
+			//以下变量age是全局变量	
+			document.write(name+"的年龄是"+age+"岁！<hr>");
+			*/
+			var name="张三";
+			function showInfo()
+			{
+			
+				age=20;		//全局变量
+				document.write(name+"的年龄是"+age+"岁！<hr>");
+			}	
+			//此时程序将报错，age不存在
+			document.write(name+"的年龄是"+age+"岁！<hr>");	
+			showInfo();	
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

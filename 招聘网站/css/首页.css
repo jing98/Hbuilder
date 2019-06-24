@@ -1,0 +1,764 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	outline: none;
+	border: 0
+}
+
+body {
+	font-family: "微软雅黑";
+	font-size: 18px;
+}
+
+#background {
+	background: url(../images/login.jpg) 0 0 no-repeat scroll transparent;
+	background-size: cover;
+	position: relative;
+}
+
+a:link,
+a:visited {
+	text-decoration: none;
+	color: #3399FF;
+	font-size: 18px;
+}
+
+#header {
+	width: 90%;
+	height: 50px;
+	margin-left: 100px;
+}
+
+#header img {
+	float: left;
+	width: 200px;
+	height: 50px;
+}
+
+#header nav {
+	width: 780px;
+	margin: 0 auto;
+}
+
+#header li {
+	float: right;
+	list-style-type: none;
+}
+
+#header li a {
+	display: inline-block;
+	height: 50px;
+	width: 80px;
+	text-align: center;
+	line-height: 55px;
+}
+
+#header a:hover {
+	background: #3399ff center center;
+}
+
+#left1 {
+	position: absolute;
+	left: 188px;
+	top: 255px;
+	font-size: 14px;
+}
+
+#left1 li {
+	padding-bottom: 5px;
+	display: block;
+	width: 450px;
+	height: 30px;
+	line-height: 30px;
+}
+
+#left1 span {
+	float: right;
+	color: #bbb;
+	font-size: 10px;
+}
+
+#left1 a {
+	color: deeppink;
+}
+
+#right {
+	position: absolute;
+	left: 1165px;
+	top: 325px;
+}
+
+#right td,
+th {
+	padding: 5px 0;
+	vertical-align: middle;
+}
+
+#right th {
+	padding-right: 10px;
+	color: #000;
+	font-weight: normal;
+}
+
+.indexLoginTBinput3 {
+	width: 75px;
+	height: 25px;
+	background: url(../images/btn.jpg) no-repeat;
+	text-align: center;
+	line-height: 25px;
+	color: #fff;
+	display: block;
+	font-weight: bold;
+	float: left;
+	margin-right: 10px;
+}
+
+.indexLoginTBinput4 {
+	width: 75px;
+	height: 25px;
+	background: url(../images/btn1.jpg) no-repeat;
+	text-align: center;
+	line-height: 25px;
+	color: #777;
+	display: block;
+	font-weight: bold;
+	float: left;
+}
+
+#background #footer {
+	color: #BBBBBB;
+	width: 100%;
+	height: 50px;
+	line-height: 26px;
+	text-align: center;
+	padding-top: 825px;
+	margin-bottom: 65px;
+}
+
+#gsdl #footer {
+	color: #BBBBBB;
+	width: 100%;
+	height: 50px;
+	line-height: 26px;
+	text-align: center;
+	padding-top: 725px;
+	margin-bottom: 65px;
+}
+
+#qyzc #footer {
+	color: #BBBBBB;
+	width: 100%;
+	height: 50px;
+	line-height: 26px;
+	text-align: center;
+	padding-top: 825px;
+	margin-bottom: 65px;
+}
+
+#qydljm #footer {
+	color: #BBBBBB;
+	width: 100%;
+	height: 50px;
+	line-height: 26px;
+	text-align: center;
+	padding-top: 825px;
+	margin-bottom: 65px;
+}
+
+#xxck #footer {
+	color: #BBBBBB;
+	width: 100%;
+	height: 50px;
+	line-height: 26px;
+	text-align: center;
+	margin-top: 50px;
+}
+
+#wsgsxx #footer {
+	color: #BBBBBB;
+	width: 100%;
+	height: 50px;
+	line-height: 26px;
+	text-align: center;
+	margin-top: 50px;
+}
+
+#xggsxx #footer {
+	color: #BBBBBB;
+	width: 100%;
+	height: 50px;
+	line-height: 26px;
+	text-align: center;
+	margin-top: 50px;
+}
+
+#txzp #footer {
+	color: #BBBBBB;
+	width: 100%;
+	height: 50px;
+	line-height: 26px;
+	text-align: center;
+	margin-top: 50px;
+}
+#xg #footer {
+	color: #BBBBBB;
+	width: 100%;
+	height: 40px;
+	line-height: 26px;
+	text-align: center;
+	margin-top: 40px;
+}
+
+#look #footer {
+	color: #BBBBBB;
+	width: 100%;
+	height: 40px;
+	line-height: 26px;
+	text-align: center;
+	margin-top: 40px;
+}
+#jx1 #footer {
+	color: #BBBBBB;
+	width: 100%;
+	height: 40px;
+	line-height: 26px;
+	text-align: center;
+	margin-top: 40px;
+}
+#jb #footer {
+	color: #BBBBBB;
+	width: 100%;
+	height: 40px;
+	line-height: 26px;
+	text-align: center;
+	margin-top: 40px;
+}
+
+
+/*公司登陆界面*/
+
+#gsdl {
+	background: #ffcc33;
+}
+
+.gsdltp {
+	width: 140px;
+	height: 35px;
+	background: url(../images/btn1.jpg) no-repeat;
+	background-size: 145px 35px;
+	text-align: center;
+	line-height: 25px;
+	color: #fff;
+	display: block;
+	font-weight: bold;
+	float: left;
+	margin-right: 10px;
+}
+
+
+/*企业注册界面*/
+
+#qyzc {
+	background: url(../images/注册.jpg);
+	background-size: cover;
+}
+
+#gll {
+	width: auto;
+	height: 30px;
+	background: #777777;
+}
+
+#gll a {
+	float: right;
+	color: deeppink;
+	display: inline-block;
+	height: 30px;
+	width: 120px;
+	text-align: center;
+}
+
+#gll a:hover {
+	background: #3399ff center center;
+}
+
+#right tr {
+	height: 40px;
+}
+
+#right #select {
+	background: darkgray;
+	height: 25px;
+	width: 180px;
+}
+
+#right input {
+	background: darkgray;
+	height: 25px;
+	width: 225px;
+}
+
+#right #zc2 {
+	width: 350px;
+	height: 35px;
+	background: url(../images/btn1.jpg) no-repeat;
+	background-size: 350px 35px;
+	text-align: center;
+	line-height: 35px;
+	color: #fff;
+	display: block;
+	font-weight: bold;
+	float: right;
+	margin-right: 180px;
+}
+
+#right #dl3 {
+	color: aliceblue;
+	height: 2px;
+	height: 2px;
+}
+
+.loginT3 {
+	position: absolute;
+	left: 779px;
+	top: 396px;
+	width: 121px;
+}
+
+
+/* 公司企业登陆界面*/
+
+#qydljm {
+	background: #A9A9A9;
+	background-size: cover;
+}
+
+#xxck {
+	background: #A9A9A9;
+	/*text-align: center;*/
+}
+
+#xxck1 {
+	margin-left: 50px;
+	background: bisque;
+	width: 800px;
+	height: 100%;
+	margin-left: 550px;
+	padding-top: 20px;
+	padding-bottom: 150px;
+	margin-top: 50px;
+}
+
+#xxck1 h2 {
+	float: left;
+	color: darkgoldenrod;
+}
+
+#xxck1 #select {
+	height: 25px;
+	width: 200px;
+}
+
+#xxck1 th {}
+
+#xxck1 td {
+	height: 60px;
+	width: 300px;
+}
+
+#xxck1 #xx6,
+#xx5,
+#xx4,
+#xx3,
+#xx2,
+#xx1 {
+	width: 200px;
+	height: 25px;
+	margin-left: -moz-calc(50px);
+	text-align: center;
+}
+
+#mmm1 {
+	background: cyan;
+	position: absolute;
+	left: 188px;
+	top: 255px;
+	font-size: 14px;
+	background-size: cover;
+}
+
+#mmm1 li {
+	height: 40px;
+}
+
+#mmm1 h2 {
+	height: 50px;
+}
+
+#mmm1 a:hover {
+	background: #3399ff center center;
+}
+
+#mmm1 a {
+	color: gold;
+}
+
+#mmm2 {
+	background: cyan;
+	position: absolute;
+	left: 588px;
+	top: 255px;
+	font-size: 14px;
+}
+
+#mmm2 li {
+	height: 40px;
+}
+
+#mmm2 h2 {
+	height: 50px;
+}
+
+#mmm2 a:hover {
+	background: #3399ff center center;
+}
+
+#mmm2 a {
+	color: gold;
+}
+
+#mmm3 {
+	position: absolute;
+	left: 988px;
+	top: 255px;
+	font-size: 14px;
+	background: cyan;
+}
+
+#mmm3 li {
+	height: 40px;
+}
+
+#mmm3 h2 {
+	height: 50px;
+}
+
+#mmm3 a:hover {
+	background: #3399ff center center;
+}
+
+#mmm3 a {
+	color: gold;
+}
+
+#mmm4 {
+	position: absolute;
+	left: 1388px;
+	top: 255px;
+	font-size: 14px;
+	background: cyan;
+}
+
+#mmm4 li {
+	height: 40px;
+}
+
+#mmm4 h2 {
+	height: 50px;
+}
+
+#mmm4 a:hover {
+	background: #3399ff center center;
+}
+
+#mmm4 a {
+	color: gold;
+}
+
+
+/*招聘信息的填写*/
+
+#txzp {
+	background: darkgray;
+}
+
+#fbzp {
+	margin-left: 50px;
+	background: bisque;
+	width: 800px;
+	height: 100%;
+	margin-left: 450px;
+	padding-top: 20px;
+	padding-bottom: 150px;
+	margin-top: 50px;
+	padding-left: 200px;
+}
+
+#fbzp td {
+	height: 60px;
+}
+
+
+/*查看招聘信息*/
+
+#look {
+	background: darkgray;
+}
+
+#look .page {
+	text-align: center;
+	padding-top: 150px;
+}
+
+#look .page a {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	padding: 2px 9px;
+	border: 1px solid #ccc;
+	background: #fff;
+}
+
+#look .page .select,
+.page a:hover {
+	background: #FBFFB6;
+	color: #777;
+}
+
+.TB1 th {
+	color: #888;
+	width: 100px;
+	text-align: left;
+	line-height: 20px;
+	vertical-align: top
+}
+
+
+.TB th {
+	color: #888;
+	width: 200px;
+	text-align: left;
+	line-height: 30px;
+	vertical-align: top;
+	
+}
+.TB td {
+	color: #444;
+}
+.TB1 td {
+	color: #444;
+}
+
+#eg1 {
+	background: #fff;
+	margin-left: 480px;
+	width: 800px;
+	height: 200px;
+}
+
+#tit1 {
+	overflow: auto;
+	zoom: 1;
+}
+
+#tit1 h2 {
+	font-size: 24px;
+	color: #0d4f8b;
+	float: left;
+	font-weight: normal;
+}
+
+#tit1 h3 {
+	font-size: 14px;
+	color: #333;
+	margin-bottom: 10px;
+}
+
+#fr {
+	margin-left: 350px;
+}
+#fr1 {
+	margin-left:650px;
+	padding-top:-moz-calc(5)px;
+}
+#fr a {
+	background: yellowgreen;
+}
+#fr1 a {
+	background: #FFD700;
+}
+.box1More {
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	color: #00FFFF;
+	text-align: center;
+	margin-bottom: 20px;
+	background: darkgray;
+}
+
+
+.shadow {
+	box-shadow: 2px 2px #bbb;
+}
+
+
+/*投影 html5*/
+
+#eg2 {
+	background: #fff;
+	margin-left: 480px;
+	width: 800px;
+	height: 200px;
+}
+
+#eg3 {
+	background: #fff;
+	margin-left: 480px;
+	width: 800px;
+	height: 200px;
+}
+
+
+/*右半部分*/
+
+.right {
+	width: 220px;
+	float: right;
+}
+
+.rSearch {
+	margin-bottom: 20px;
+	background: #fff;
+	padding: 20px 0px 20px 15px;
+	color: #999;
+}
+
+.rSearchInput {
+	height: 30px;
+	line-height: 30px;
+	border: 0;
+	background: url(../images/ico03.gif) 15px 7px no-repeat #fbffb6;
+	padding-left:20px;
+	width: 100px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #888;
+	margin-bottom: 10px;
+	margin-left: 10px;
+}
+
+.rSearchInput:hover {
+	background: url(../images/ico03.gif) 15px 7px no-repeat #feffe5
+}
+
+.rSearch select {
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #ccc;
+	padding-left: 10px;
+	width: 120px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #888;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	vertical-align: middle;
+	background: #fafafa;
+}
+
+.rPosition {
+	background: #fff;
+}
+
+.rPosition strong {
+	display: block;
+	line-height: 40px;
+	height: 40px;
+	width: 180px;
+	font-size: 15px;
+	color: #888;
+	font-weight: bold;
+	padding-left: 40px;
+	background: url(../images/ico05.gif) no-repeat 15px 15px #fff;
+	border-bottom: 1px solid #c8c8c8;
+	box-shadow: 0px 3px #f1f1f1;
+}
+
+.rPosition a {
+	display: block;
+	line-height: 32px;
+	height: 32px;
+	width: 188px;
+	color: #000;
+	padding-left: 32px;
+	;
+	border-bottom: 1px solid #c8c8c8;
+}
+
+.rPosition a:hover {
+	background: #fafafa
+}
+
+.rType {
+	background: #fff;
+	margin-bottom: 20px;
+}
+
+.rType strong {
+	display: block;
+	line-height: 40px;
+	height: 40px;
+	width: 180px;
+	font-size: 15px;
+	color: #888;
+	font-weight: bold;
+	padding-left: 40px;
+	background: url(../images/ico05.gif) no-repeat 15px 15px #fff;
+	border-bottom: 1px solid #c8c8c8;
+	box-shadow: 0px 3px #f1f1f1;
+}
+
+.rType li {
+	display: block;
+	line-height: 32px;
+	height: 32px;
+	width: 188px;
+	color: #000;
+	padding-left: 32px;
+}
+
+.rType .select,
+.rType li:hover {
+	background: #eee;
+	cursor: pointer;
+}
+
+.rPosition a {
+	display: block;
+	line-height: 32px;
+	height: 32px;
+	width: 188px;
+	color: #000;
+	padding-left: 32px;
+	;
+	border-bottom: 1px solid #c8c8c8;
+}
+
+.rPosition a:hover {
+	background: #fafafa
+}
+.delite {
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	color
+	text-align: right;
+	margin-bottom: 20px;
+	background: darkgray;
+}
+
+#jb{
+	background: darkgray;
+}

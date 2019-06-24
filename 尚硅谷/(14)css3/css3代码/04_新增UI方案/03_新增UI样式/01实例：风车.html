@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			/*禁止系统滚动条*/
+			html,body{
+				 height: 100%;
+				 overflow: hidden;
+			}
+			#warp{
+				width: 300px;
+				height: 300px;
+				/*border: 1px solid;*/
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				/*在2s之内旋转完*/
+				transition: 2s;
+			}
+			#warp>div{
+				margin: 10px;
+				width:130px;
+				height: 130px;
+				border: 1px solid;
+				background: pink;
+				float: left;
+				box-sizing: border-box;
+			}
+			#warp>div:nth-child(1),#warp>div:nth-child(4)
+			{
+				border-radius: 0 60%;
+			}
+			#warp>div:nth-child(2),#warp>div:nth-child(3)
+			{
+				border-radius: 60% 0;
+			}
+			#warp:hover{
+				transform: rotate(120deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="warp">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</body>
+</html>

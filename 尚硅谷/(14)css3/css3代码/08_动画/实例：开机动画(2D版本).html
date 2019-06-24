@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>实例：开机动画（2D版本）</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body{
+				height: 100%;
+				overflow: hidden;
+			}
+			#warp{
+				height: 100%;
+				position: relative;
+				background: gray;
+			}
+			#warp>.inner{
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate3d(-50%,-50%,0);
+				text-align: center;
+				white-space: nowrap;
+			}
+			#warp>.inner>span{
+				position: relative;
+				/*反转*/
+				/*animation: move 1s linear infinite alternate;*/
+			}
+			@keyframes move{
+				from{
+					top: 0px;
+				}
+				to{
+					top: -10px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="warp">
+			<div class="inner">
+				<span id="">几</span>
+				<span id="">百</span>
+				<span id="">斤</span>
+				<span id="">的</span>
+				<span id="">人</span>
+				<span id="">了</span>
+				<span id="">上</span>
+				<span id="">课</span>
+				<span id="">还</span>
+				<span id="">要</span>
+				<span id="">装</span>
+				<span id="">可</span>
+				<span id="">爱</span>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		window.onload=function(){
+			var spanNodes=document.querySelectorAll("#warp>.inner>span");
+			var colors=["red","orange","yellow","green","blue","pink","deeppink","red","orange","yellow","green","blue","pink"]
+			for(var i=0;i<spanNodes.length;i++)
+			{
+				spanNodes[i].style.animation="move .3s "+(i*50)+"ms linear infinite alternate";
+				spanNodes[i].style.color=colors[i];
+			}
+		}
+	</script>
+</html>

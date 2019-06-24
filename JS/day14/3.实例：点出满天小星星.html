@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html onclick="init(event)">
+	<head>
+		<meta charset="UTF-8">
+		<title>实例：点出满天小星星</title>
+	</head>
+	<script type="text/javascript">
+		/*
+		 	1.当单击onclick事件发生时，去显示一个星星
+		 * */
+		function init(e)
+		{
+			//网页背景色
+			document.body.bgColor="#000";
+			//创建图片
+			var imgObj=document.createElement("img");
+			//追加到<body>结点下
+			document.body.appendChild(imgObj);
+			//增加src属性
+			imgObj.src="img/xingxing.png";
+			//增加width属性
+			var width=getRandom(15,85);
+			imgObj.width=width;
+			//增加style属性
+			var x=e.clientX?e.clientX:event.clientX;  //兼容性判断
+			var y=e.clientY?e.clientX:event.clientY;
+			//图片定位
+			imgObj.style.position="absolute";
+			//图片在鼠标中心显示
+			imgObj.style.left=x-width/2+"px";
+			imgObj.style.top=y-width/2+"px";
+		}
+		function getRandom(min,max){
+			//随机数
+			var random=Math.random()*(max-min)+min;
+			//向下取整
+			random=Math.floor(random);
+			return random;
+		}
+	</script>
+	<body bgcolor="#000000">
+	</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding: 0;
+			}
+			html,body{
+				height: 100%;
+				overflow: hidden;
+			}
+			#test{
+				width: 400px;
+				height:200px;
+				border: 1px solid;
+				/*椭圆*/
+				border-radius: 200px/100px;
+				/*border-radius: 50%;*/
+				text-align: center;
+				font: 25px/200px helvetica;
+				position: relative;
+			}
+			#test::after{
+				position: absolute;
+				display: block;
+				content: "";
+				width: 70px;
+				height: 70px;
+				border: 1px solid;
+				/*定位时，考虑right和botton，整个坐标系反过来了，负值往外扩，正值往里收*/
+				bottom: -65px;
+				right: -25px;
+				border-radius: 50%;
+			}
+			#test::before{
+				position: absolute;
+				display: block;
+				content: "";
+				width: 50px;
+				height: 50px;
+				border: 1px solid;
+				bottom: -120px;
+				right: -90px;
+				border-radius: 50%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="test">
+			大家好，欢迎入教BTS!!!
+		</div>
+	</body>
+</html>

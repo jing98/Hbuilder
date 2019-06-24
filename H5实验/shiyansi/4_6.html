@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>SVG事件编程</title>
+	</head>
+	<body>
+		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="600" height="200">
+			<text x="20" y="20" font-family="微软雅黑" onclick="chageColor(event)" >
+		  	我会显示在图片上
+		  </text>
+		</svg>
+		<script type="text/javascript">
+			function chageColor(event){
+				console.dir(event.target);
+				event.target.style.fill="red";
+			}
+		</script>
+	</body>
+</html>

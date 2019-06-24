@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>二维数组</title>
+		<script type="text/javascript">
+			/*
+			 * 给一个数组元素，赋一个数组的值，那么，这个数组就是“二维数组”
+			 * 二维数组跟表格很像
+			 */
+			//创建一个空的数组
+			var arr=new Array();
+			//添加数组元素,数组元素的值可以是任何类型
+			arr[0]="张三";
+			arr[1]="男";
+			arr[2]=["123458699","huihkj@qq.com","010-45688775"];
+			//构建输出的结果
+			var str="<h2>"+arr[0]+"的基本信息</h2>";
+			str+="姓名："+arr[0];
+			str+="<br>性别："+arr[1];
+			str+="<br>QQ号码："+arr[2][0];
+			str+="<br>邮箱："+arr[2][1];
+			str+="<br>电话："+arr[2][2]+"<hr>";
+			//输出结果
+			document.write(str);
+			
+			var arr=[
+						[0,1,2,3],
+						[10,11,12,13],
+						[20,21,22,23]
+					];
+			document.write(arr[1]);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

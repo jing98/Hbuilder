@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="test" class="tjg tjg1 tjg2 tjg3">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var testNode=document.querySelector("#test");
+		//console.log(testNode.className);
+		testNode.classList.add("tjg4");
+		testNode.classList.remove("tjg1");
+		testNode.classList.toggle("tjg1");  //如果没有就添加，如果有就删除
+		console.log(testNode.classList);
+	</script>
+</html>

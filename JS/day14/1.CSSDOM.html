@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSSDOM</title>
+</head>
+<script type="text/javascript">
+	//网页加载完成
+	window.onload=function(){
+		var imgObj=document.getElementById("img01");
+		//给<img>标记添加行内样式
+		imgObj.style.width="400px";
+		imgObj.style.border="2px solid red";
+		imgObj.style.padding="20px 10px";
+		//imgObj.style.background-color="blue";
+		imgObj.style.backgroundColor="orange";
+	}
+	
+
+</script>
+<body>
+	<img id="img01" src="img/Hydrangeas.jpg"/>
+</body>
+</html>

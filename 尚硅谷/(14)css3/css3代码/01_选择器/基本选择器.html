@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*
+			 * css的全称：cascading style sheets
+			 * 1.样式表
+			   2.规则
+			   3.选择器+声明块
+			   4.声明
+			   5.css属性+css属性值组成
+			  
+			  * */
+			/*浏览器解析是从右往左*/
+			
+			/*
+			 * 基本选择器及其扩展：
+					 通配符 *
+					id #
+					 类  .
+					元素  元素名
+					后代  空格
+					分组   ，(结合符)	
+					
+					子元素选择器（直接后代选择器）  >
+			  		相邻兄弟选择器（紧跟）   +
+			  		通用兄弟选择器    ~
+			 
+					css声明的优先级
+			 * */
+			
+			/*属性选择器：
+			 * 存在和值选择器   []
+			 * 子串值选择器  
+			 * 
+			 * */
+			
+			
+			
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			h1,h2,h3{
+				color: orchid;
+			}
+			#test{
+				color: palegreen;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="wrap">
+			<h1 id="test">1-1</h1>
+			<h2>2-1</h2>
+			<h3>3-1</h3>			
+		</div>
+
+	</body>
+
+</html>

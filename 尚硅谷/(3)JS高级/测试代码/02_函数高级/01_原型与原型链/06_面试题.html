@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>06_面试题</title>
+</head>
+<body>
+
+<script type="text/javascript">
+  /*
+  测试题1
+   */
+  
+   //定义了一个函数A
+  function A () {
+
+  }
+	//在函数A的原型上面添加了一个属性n
+  A.prototype.n = 1
+	//创建了一个实例b
+  var b = new A()
+	//更新了A的prototype本身，指向了一个新的对象
+  A.prototype = {
+    n: 2,
+    m: 3
+  }
+
+  var c = new A()
+  console.log(b.n, b.m, c.n, c.m)		//1 undefined 2 3
+
+
+  /*
+   测试题2
+   */
+  //定义了一个函数F
+  function F (){}
+  //Object原型添加一个a方法
+  Object.prototype.a = function(){
+    console.log('a()')
+  }
+  //Function原型添加一个b方法
+  Function.prototype.b = function(){
+    console.log('b()')
+  }
+  //new一个F的实例名为f
+  var f = new F()
+  f.a()
+  // f.b()
+  F.a()
+  F.b()
+  console.log(f)
+  console.log(Object.prototype)
+  console.log(Function.prototype)
+
+</script>
+</body>
+</html>

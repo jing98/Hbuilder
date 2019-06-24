@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>求职人员注册</title>	
+		<style type="text/css">
+			body {
+					font-family: "微软雅黑";
+					font-size: 18px;
+					background: url(images/注册.jpg);
+					background-size: cover;
+				}
+		</style>
+		<link rel="stylesheet" type="text/css" href="css/注册.css" />
+		<script type="text/javascript" src="js/注册.js"></script>
+	</head>
+
+	<body>
+		<!--头部导航栏-->
+		<div id="header">
+			<img src="images/logo.png" />
+			<p>&nbsp;&nbsp;
+				<font face="微软雅黑" size="6">|</font>&nbsp;&nbsp;
+				<font face="微软雅黑" size="6">个人版</font>
+			</p>
+			<ul>
+				<li>
+					<p>
+						<font face="微软雅黑" size="3">客户服务热线：</font>&nbsp;
+						<font face="微软雅黑" size="3">400-855-9626</font>
+					</p>
+				</li>
+			</ul>
+		</div>
+		<br />
+		<hr color="#BBBBBB" style="height: 5px;" width="100%">
+		<!--
+		<div id="gll">
+			<a href="首页.html">退出</a>
+			<a href="#">帮助</a>
+			<a href="#">消息</a>
+			<a href="#">个人档案</a>
+			<a href="#">我来推荐</a>
+			<a href="#">岗位浏览</a>
+		</div>
+		-->
+		<br><br>
+		<p id="i"  align="center"><font size="6" >用户注册</font></p>
+		<!--用户注册-->
+		<div id="d1">
+			<form action="" method="post" onsubmit="return validateForm()">
+				<!-- 当触发提交事件时调用validateForm()方法  -->
+				<table border="26" align="right" width="50%">
+					<tr>
+						<td align="right">
+							<!--<sup></sup>定义上标文本-->
+							<sup><font color="red">*</font></sup>用户名：
+						</td>
+						<td>
+							<input type="text" name="username" id="username" class="input_class" onblur="checkUsername(this)" />
+							<span id="username_span">用户名由3-5个字符组成</span>
+						</td>
+					</tr>
+					<tr>
+						<td align="right">
+							<sup><font color="red">*</font></sup>密码：
+						</td>
+						<td>
+							<input type="password" name="password" id="password" class="input_class" onblur="checkPassword(this)" />
+							<span id="password_span">请输入8-12位密码</span>
+						</td>
+					</tr>
+
+					<tr>
+						<td align="right">
+							<sup><font color="red">*</font></sup>确认密码：
+						</td>
+						<td>
+							<input type="password" name="rePassword" id="rePassword" class="input_class" onblur="checkRePassword(this)" />
+							<span id="rePassword_span">两次密码不一致</span>
+						</td>
+					</tr>
+
+					<tr>
+						<td align="right">
+							<sup><font color="red">*</font></sup>Email：
+						</td>
+						<td>
+							<input type="text" name="Email" id="Email" class="input_class" onblur="checkEmail(this)" />
+							<span id="Email_span">格式示例：xxxxxxxx@163.com</span>
+						</td>
+					</tr>
+
+					<tr>
+						<td align="right">
+							<sup><font color="red">*</font></sup>真实姓名：
+						</td>
+						<td>
+							<input type="text" name="realName" id="realName" class="input_class" onblur="checkName(this)" />
+							<span id="realName_span">由2-5个中文组成</span>
+						</td>
+					</tr>	
+					
+					<tr>
+						<td align="right">
+							<sup><font color="red">*</font></sup>学历：
+						</td>
+						<td>
+							<select name="graduate" id="graduate" onblur="checkGraduate(this)">
+								<option value="--请选择--">--请选择--</option>
+								<option value="高中">高中</option>
+								<option value="专科">专科</option>
+								<option value="本科">本科</option>
+								<option value="研究生">研究生</option>
+							</select>
+							<span id="graduate_span">请选择学历</span>
+						</td>
+					</tr>
+					
+					<tr>
+						<td align="right">
+							<sup><font color="red">*</font></sup>省份：
+						</td>
+						<td>
+							<select name="province" id="province" onblur="checkProvince(this)">
+								<option value="--请选择--">--请选择--</option>
+								<option value="河北">河北</option>
+								<option value="山西">山西</option>
+								<option value="山东">山东</option>
+								<option value="陕西">陕西</option>
+								<option value="上海">上海</option>
+								<option value="天津">天津</option>
+								<option value="河南">河南</option>
+								<option value="广东">广东</option>
+							</select>
+							<span id="province_span">请选择省份</span>
+						</td>
+					</tr>
+					
+					<tr>
+						<td align="left" colspan="2">
+							<sup><font color="red">*</font></sup>技术方向：
+							<input type="radio" name="jishu" id="Java" value="Java" checked="checked" />Java
+							<!-- 技术方向默认选中Java -->
+							<input type="radio" name="jishu" id="Python" value="Python" />Python
+							<input type="radio" name="jishu" id="PHP" value="PHP" />PHP
+							<input type="radio" name="jishu" id="网页" value="网页" />网页
+							<input type="radio" name="jishu" id="IOS" value="IOS" />IOS
+						</td>
+					</tr>
+
+					<tr>
+						<td align="center" colspan="2">
+							<a href="login.html" class="aaa"><font color="#000000">注册</font></a>
+                            <!--input type="submit"name="submit" class="aaa" value="注册"/-->
+							<input type="reset" name="reset" class="aaa" value="重置" />
+						</td>	
+					</tr>
+				</table>
+			</form>
+		</div>
+		<div id="f1">Copyright  2012 itmag.com All rights reserved. | 苏ICP备12067872号 </div>
+	</body>
+</html>

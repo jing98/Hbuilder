@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>old flex</title>
+		<style type="text/css">
+			
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#warp{
+				width: 400px;
+				height: 300px;
+				border: 1px solid;
+				margin: 100px auto;
+
+				display: -webkit-box;
+				-webkit-box-orient: horizontal;
+				-webkit-box-direction: normal;
+				-webkit-box-pack: start;
+				-webkit-box-align: start;
+			}
+			#warp>.item{
+				width: 50px;
+				height: 50px;
+				background: pink;
+				text-align: center;
+				line-height: 50px;
+				/*
+				 * 弹性空间管理：
+				 * 		将主轴上的富裕空间按比例分配到项目上
+				 * */
+				-webkit-box-flex: 1;
+			}
+			#warp>.item:nth-child(1){
+				-webkit-box-flex: 4;
+			}
+</style>
+	</head>
+	<body>
+		<div id="warp">
+			<div class="item">1</div>
+			<div class="item">2</div>
+			<div class="item">3</div>
+			<div class="item">4</div>
+			<div class="item">5</div>
+		</div>
+	</body>
+</html>

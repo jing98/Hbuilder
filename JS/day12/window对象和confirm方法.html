@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>window对象和confirm方法</title>
+		<script type="text/javascript">
+			function confirmDel () {
+				if(window.confirm("你确认要删除吗？"))
+				{
+					location.href="delete.php";
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<table width="700" border="1" align="center" rulesg="all" cellpadding="5">
+			<tr>
+				<th>新闻id</th>
+				<th>新闻标题</th>
+				<th>发布日期</th>
+				<th>操作选项</th>
+			</tr>
+			<tr>
+				<td>10010</td>
+				<td>习近平等出席全国人大二次会议第二次全体会议</td>
+				<td>2019-03-08</td>
+				<td><a href="#">修改 </a><a href="#" onclick="confirmDel()">删除</a></td>
+			</tr>
+			<tr>
+				<td>10020</td>
+				<td>尽锐出战、迎难而上 确保脱贫攻坚如期完成</td>
+				<td>2019-03-06</td>
+				<td><a href="#">修改 </a><a href="#" onclick="confirmDel()">删除</a></td>
+			</tr>
+			<tr>
+				<td>10030</td>
+				<td>2019年全国人大将落实制定房地产税法</td>
+				<td>2019-03-04</td>
+				<td><a href="#">修改 </a><a href="#" onclick="confirmDel()">删除</a></td>
+			</tr>
+		</table>
+	</body>
+</html>

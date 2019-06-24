@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				border: 1px solid blue;
+			}
+			.c1{
+				height: 20px;
+				padding-left: 40%;
+				padding-right: 40%;
+			}
+			.c2{
+				background-color: royalblue;
+				height: 18px;
+			}
+			.c3{
+				height: 20px;
+			}
+			.c4{
+				height: 18px;
+				width: 40%;
+				background-color: royalblue;
+				/*margin-left: auto;/*让浏览器进行计算，平分余下空间*/
+				margin-right: auto;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+	<body>
+		<!--元素居中
+			1. 用padding，让左边和右边一样的宽度.由于padding是元素调整其内容和边框的距离，因而要通过父亲让内容居中
+          	2. 用margin,因为它是元素推自身。箱子默认靠父亲左边对齐，推箱子时让它距离左边和右边一样距离，这样就实现了居中对齐
+		-->
+		<div class="c1">
+			<div class="c2">
+				
+			</div>
+		</div>
+		<div class="c3">
+			<div class="c4">
+				
+			</div>
+		</div>
+	</body>
+</html>

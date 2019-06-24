@@ -1,0 +1,138 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title>第一种</title>
+</head>
+<script type="text/javascript">
+	function changeBig(){
+		var imgObj=document.getElementById("img01");
+		imgObj.width=imgObj.width*2;
+	}
+	
+</script>
+<body>
+	<img id="img01" width="400" src="img/Hydrangeas.jpg" onclick="changeBig()"/>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title>第二种</title>
+</head>
+<script type="text/javascript">
+	var imgObj;
+	window.onload=function(){	//复合数据类型，都是传地址
+		imgObj=document.getElementById("img01");
+		imgObj.onclick=changeBig;	//引用传址，不带括号
+	}
+	function changeBig(){
+		imgObj.width=imgObj.width*2;
+	}
+	
+</script>
+<body style="margin: 0px;">
+	<img id="img01" width="400" src="img/Hydrangeas.jpg" />
+</body>
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title>（1）DOM中event对象</title>
+</head>
+<script type="text/javascript">
+	
+	//在html中，如何通过事件来传递event对象参数
+	function get_xy(e){
+		//获取单击时，距离窗口左边和上边的距离
+		alert(e.clientX+","+e.clientY);
+	}
+</script>
+<body style="margin: 0px;">
+	<img width="400" src="img/Hydrangeas.jpg" onclick="get_xy(event)" />
+</body>
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title>（2）DOM中event对象</title>
+</head>
+<script type="text/javascript">
+	
+	window.onload=function(){
+		var imgObj=document.getElementById("img01");
+		imgObj.onclick=get_xy;  //传地址，不带括号
+	}
+	//不能传event参数，但形参必须接收
+	//第一个形参。一定是event对象
+	function get_xy(e){
+		//获取单击时，距离窗口左边和上边的距离
+		alert(e.clientX+","+e.clientY);
+	}
+</script>
+<body style="margin: 0px;">
+	<img id="img01" width="400" src="img/Hydrangeas.jpg" />
+</body>
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title>（1）IE中event对象</title>
+</head>
+<script type="text/javascript">
+	//在IE中，event对象的使用
+	//在IE中，event对象是window对象的一个属性，可以直接在函数中使用，而不需要传参数
+	function get_xy(){
+		var str="窗口左边距离："+event.clientX+",窗口上边距离"+event.clientY;
+		str+="\n网页左边距离："+event.x+",网页上边距离："+event.y;
+		str+="\n屏幕左边距离："+event.screenX+",屏幕上边距离"+event.screenY;
+		str+="\n事件类型："+event.type;
+		alert(str);
+	}
+</script>
+<body>
+<img width="400" src="img/Hydrangeas.jpg" onclick="get_xy()" >
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>（2）IE中event对象</title>
+</head>
+<script type="text/javascript">
+	window.onload=function(){
+		var imgObj=document.getElementById("img01");
+		imgObj.onclick=get_xy;
+	}
+	//在IE中，event对象的使用
+	//在IE中，event对象是window对象的一个属性，可以直接在函数中使用，而不需要传参数
+	function get_xy(){
+		var str="窗口左边距离："+event.clientX+",窗口上边距离"+event.clientY;
+		str+="\n网页左边距离："+event.x+",网页上边距离："+event.y;
+		str+="\n屏幕左边距离："+event.screenX+",屏幕上边距离"+event.screenY;
+		str+="\n事件类型："+event.type;
+		alert(str);
+	}
+</script>
+<body>
+<img id="img01" width="400" src="img/Hydrangeas.jpg" />
+</body>
+</html>

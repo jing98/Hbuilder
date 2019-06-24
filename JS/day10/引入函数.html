@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>引入函数</title>
+		<script type="text/javascript">
+			//（1）求0和5的最大值
+			var a=0;
+			var b=5;
+			if(a>b)
+			{
+				document.write(a+"大<br>");
+			}
+			else
+			{
+				document.write(b+"大<br>");
+			}
+			//（2）求5和10的最大值
+			var a=5;
+			var b=10;
+			if(a>b)
+			{
+				document.write(a+"大<br>");
+			}
+			else
+			{
+				document.write(b+"大<br>");
+			}
+			//（3）求10和20的最大值
+			var a=10;
+			var b=20;
+			if(a>b)
+			{
+				document.write(a+"大<br>");
+			}
+			else
+			{
+				document.write(b+"大<br>");
+			}
+		/*-----------------函数---------------*/
+		/*
+		 函数：将一段公共的代码进行封装
+		 函数可以一次定义，多次调用
+		 函数可以将常用的功能代码，进行封装。如：表单用户名的验证、验证码函数、邮箱的验证
+		形参：定义函数时的参数就是“形参”，主要用来接收调用函数时传过来的数据
+		实参：调用函数时的参数就是“实参”，实参就是真正的数据
+		 */
+		function getMax(a, b) {
+			if(a > b) 
+			{
+				document.write(a +"大<br>");
+			}
+			else
+			{
+				document.write(b+"大<br>");
+			}
+		}
+		getMax(0,5);
+		getMax(5,10);
+		getMax(10,20);
+				
+		</script>
+		
+		
+		
+		
+	</head>
+	<body>
+	</body>
+</html>

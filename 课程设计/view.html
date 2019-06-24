@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				background-color: paleturquoise;
+			}
+			.font {
+				pos-left: auto;
+			}
+			
+			.lubo_container {
+				position: relative;
+				height: 600px;
+				/*因为里面元素都脱离了常规流，因而高度为零*/
+				width: 590px;
+				/*要设置宽度和img一样，相对于div定位就相当于img定位*/
+			}
+			
+			.lubo_ind {
+				list-style-type: none;
+				padding: 0px;
+				/*因为用户默认为ol提供40px*/
+				margin: 0px;
+				left: 50%;
+				bottom: 10px;
+				position: absolute;
+				margin-left: -87px;
+				/*圈在正中心*/
+				z-index: 10;
+				/*如果你不修改值大于3，图片会盖住圈*/
+			}
+			
+			.lubo_ind li {
+				border: 20px solid blue;
+				width: 0px;
+				border-radius: 20px;
+				display: inline-block;
+				/*显示是内联，可以设置宽度和高度*/
+				height: 0px;
+			}
+			
+			.lubo_cards img {
+				position: absolute;
+				left: 0px;
+				top: 0px;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div>
+		<font class="font" color="#FE668F">
+			在古代，人们认为钻石是星星坠落时留下来的碎片，它拥有神奇的传说，也有人觉得他是星星悲伤留下的眼泪落在地球上成为结晶物。而钻石的英文名为“diamond”，优美的法语是“Diamante”，因为钻石的特性：璀璨、坚硬、纯净、独一无二，它被人认为是永恒爱情的象征。
+		</font>
+		</div>
+		<br>
+		<div class="lubo_container">
+			<div class="lubo_cards">
+				<!--要设置，否则先看到第四张-->
+				<img src="img/1.jpg" style="z-index: 3;" />
+				<img src="img/2.jpg" />
+				<img src="img/3.jpg" />
+				<img src="img/4.jpg" />
+			</div>
+			<ol class="lubo_ind">
+				<li style="border-color: red;" id="ppt_1"></li>
+				<li id="ppt_2"></li>
+				<li id="ppt_3"></li>
+				<li id="ppt_4"></li>
+			</ol>
+		</div>
+		<script type="text/javascript">
+			///1.周期性循环切换图片，同时对应小圈要修改样式
+			var index = 1; //记录切换到第几张了
+			var imgs = document.querySelectorAll(".lubo_cards img"); //所有要切换的图片
+			var lis = document.querySelectorAll(".lubo_ind li");
+			var intervalId; //记录周期性时钟的id
+			//页面加载后开始切换
+			startChange();
+			//用函数提高代码
+			function changeColor() {
+				for(var i = 0; i < lis.length; i++) {
+					lis[i].style.borderColor = "blue";
+				}
+				lis[index - 1].style.borderColor = "red";
+			}
+
+			for(var j = 0; j < imgs.length; j++) {
+				//2.	鼠标移动上去，停止周期性切换
+				imgs[j].onmouseover = function() {
+					window.clearInterval(intervalId);
+				}
+				//3.	鼠标移开图片，继续周期性切换
+				imgs[j].onmouseout = function() {
+					startChange();
+				}
+			}
+			//4点击小圈切换到对应图片
+			for(var j = 0; j < lis.length; j++) {
+				lis[j].onclick = function(event) {
+					//获取点击的是第几个
+					var strId = event.target.id;
+					index = strId.substr(strId.indexOf("_") + 1) - 0;
+					for(var i = 0; i < imgs.length; i++) {
+						imgs[i].style.zIndex = "auto";
+					}
+					imgs[index - 1].style.zIndex = 3;
+					//修改li的样
+					changeColor();
+				}
+			}
+
+			function startChange() {
+				intervalId = window.setInterval(function() {
+					//循环切换图片
+					index++;
+					if(index == 5) {
+						index = 1;
+					}
+					//一轮后，全部z-index相同
+					for(var i = 0; i < imgs.length; i++) {
+						imgs[i].style.zIndex = "auto";
+					}
+					imgs[index - 1].style.zIndex = 3;
+					//修改圈的样式
+					changeColor();
+				}, 3000);
+			}
+		</script>
+		
+	</body>
+
+</html>

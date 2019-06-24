@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>我的简历</title>
+		<link rel="stylesheet" href="css/我的简历.css" />
+	</head>
+
+	<body>
+		<div id="header">
+			<img src="images/logo.png" />
+			<p>&nbsp;&nbsp;
+				<font face="微软雅黑" size="6">|</font>&nbsp;&nbsp;
+				<font face="微软雅黑" size="6">我的简历</font>
+			</p>
+			<ul>
+				<li>
+					<p>
+						<font face="微软雅黑" size="3">客户服务热线：</font>&nbsp;
+						<font face="微软雅黑" size="3">400-855-9626</font>
+					</p>
+				</li>
+			</ul>
+		</div>
+		<br />
+		<hr color="#BBBBBB" style="height: 5px;" width="100%">
+		<div id="gll">
+			<div id="gll">
+				<a href="login.html">退出</a>
+				<a href="浏览招聘信息.html">返回上一页</a>
+				<a href="修改个人信息.">修改个人信息</a>
+				<a href="个人档案.html">个人档案</a>
+				<a href="我的简历.html">我的简历</a>
+				<a href="浏览招聘信息.html">首页</a>
+			</div>
+		</div>
+		<div class="tit" align="center">
+			<h1>我的简历</h1>
+		</div>
+
+		<div id="main">
+			<div class="tit" align="center">
+				<h2>个人信息</h2>
+				<div class="titText"></div>
+			</div>
+			<table class="myInfo" align="center">
+				<tr>
+					<th>姓名：</th>
+					<td>王小明</td>
+					<th>性别</th>
+					<td>男</td>
+				</tr>
+				<tr>
+					<th>年龄：</th>
+					<td>22</td>
+					<th>出生日期：</th>
+					<td>1997年3月4日</td>
+				</tr>
+				<tr>
+					<th>参加工作时间：</th>
+					<td>2018年5月2日</td>
+					<th>现居地：</th>
+					<td>河南省南阳市南阳理工学院</td>
+				</tr>
+				<tr>
+					<th>学历：</th>
+					<td>本科</td>
+					<th>联系方式:</th>
+					<td>13246583997</td>
+				</tr>
+			</table>
+		</div>
+		<!-- 一条记录 结束 -->
+		<!-- 一条记录 开始 -->
+		<div id="main">
+			<div class="tit" align="center">
+				<h2>求职意向</h2>
+				<div class="titText"></div>
+			</div>
+			<table class="myInfo" align="center">
+				<tr>
+					<th>求职状态：</th>
+					<td>
+						<select name="zt" id="select">
+							<option selected="selected">我目前处于离职状态，可立即上岗</option>
+							<option>我目前在职，正考虑换个新环境(如有合适的工作机会，到岗时间一个月左右)</option>
+							<option>我对现有工作还算满意，如有更好的工作机会，我也可以考虑(到岗时间另议)</option>
+							<option>目前暂无跳槽打算</option>
+							<option>应届毕业生</option>
+						</select>
+					</td>
+					<th>期望工作地点：</th>
+					<td>
+						<select name="dd" id="select">
+							<option selected="selected">郑州</option>
+							<option>上海</option>
+							<option>天津</option>
+							<option>深圳</option>
+							<option>北京</option>
+							<option>其他</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th>期望从事行业：</th>
+					<td>
+						<select name="hy" id="select">
+							<option>互联网/电子商务</option>
+							<option selected="selected">计算机软件</option>
+							<option>IT服务(系统/数据/维护)</option>
+							<option>电子技术/半导体/集成电路</option>
+							<option>计算机硬件</option>
+							<option>通信/电信/网络设备</option>
+							<option>其他</option>
+						</select>
+					</td>
+					<th>期望从事职业：</th>
+					<td>
+						<select name="zw" id="select">
+							<option>销售经理</option>
+							<option>市场总监</option>
+							<option>商务经理</option>
+							<option>高级硬件工程师</option>
+							<option>硬件工程师</option>
+							<option>高级软件工程师</option>
+							<option selected="selected">软件工程师</option>
+							<option>其他</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th>税前期望月薪：</th>
+					<td>
+						<select name="money" id="select">
+							<option>1000元/月以下</option>
+							<option>1000-2000元/月</option>
+							<option>2001-4000元/月</option>
+							<option>4001-6000元/月</option>
+							<option>6001-8000元/月</option>
+							<option selected="selected">8001-10000元/月</option>
+							<option>面议</option>
+						</select>
+					</td>
+					<th>期望工作性质：</th>
+					<td>
+						<input type="checkbox" name="checkbox" checked="checked">全职
+						<input type="checkbox" name="checkbox">兼职
+						<input type="checkbox" name="checkbox">实习
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!-- 一条记录 结束 -->
+		<!-- 一条记录 开始 -->
+		<div id="main">
+			<div class="tit" align="center">
+				<h2>工作经验</h2>
+				<div class="titText"></div>
+			</div>
+			<table class="myInfo" align="center">
+				<tr>
+					<th>公司名称：</th>
+					<td>
+						<input type="text" name="text1" onclick="this.value=''" value="必填" />
+					</td>
+				</tr>
+				<tr>
+					<th>所属行业：</th>
+					<td>
+						<select name="hy" id="select">
+							<option>互联网/电子商务</option>
+							<option selected="selected">计算机软件</option>
+							<option>IT服务(系统/数据/维护)</option>
+							<option>电子技术/半导体/集成电路</option>
+							<option>计算机硬件</option>
+							<option>通信/电信/网络设备</option>
+							<option>其他</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th>职位名称：</th>
+					<td>
+						<input type="text" name="text2" onclick="this.value=''" value="必填" />
+					</td>
+				</tr>
+				<tr>
+					<th>职位类别：</th>
+					<td>
+						<select name="zw" id="select">
+							<option>销售经理</option>
+							<option>市场总监</option>
+							<option>商务经理</option>
+							<option>高级硬件工程师</option>
+							<option>硬件工程师</option>
+							<option>高级软件工程师</option>
+							<option>软件工程师</option>
+							<option selected="selected">其他</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th>在职时间：</th>
+					<td>
+						<select name="time1" id="select">
+							<option>2014年</option>
+							<option>2015年</option>
+							<option>2016年</option>
+							<option>2017年</option>
+							<option>2018年</option>
+							<option>其他</option>
+						</select>
+						<select name="time2" id="select">
+							<option>1月</option>
+							<option>2月</option>
+							<option>3月</option>
+							<option>4月</option>
+							<option>5月</option>
+							<option>6月</option>
+							<option>7月</option>
+							<option>8月</option>
+							<option>9月</option>
+							<option>10月</option>
+							<option>11月</option>
+							<option>12月</option>
+						</select>
+						-
+						<select name="time3" id="select">
+							<option>2014年</option>
+							<option>2015年</option>
+							<option>2016年</option>
+							<option>2017年</option>
+							<option>2018年</option>
+							<option>其他</option>
+						</select>
+						<select name="time4" id="select">
+							<option>1月</option>
+							<option>2月</option>
+							<option>3月</option>
+							<option>4月</option>
+							<option>5月</option>
+							<option>6月</option>
+							<option>7月</option>
+							<option>8月</option>
+							<option>9月</option>
+							<option>10月</option>
+							<option>11月</option>
+							<option>12月</option>
+						</select>
+						<input type="checkbox" />至今
+					</td>
+				</tr>
+				<tr>
+					<th>税前月薪：</th>
+					<td>
+						<select name="money" id="select">
+							<option>1000元/月以下</option>
+							<option>1000-2000元/月</option>
+							<option>2001-4000元/月</option>
+							<option>4001-6000元/月</option>
+							<option>6001-8000元/月</option>
+							<option>8001-10000元/月</option>
+							<option>其他</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th>工作描述：</th>
+					<td>
+						<textarea rows="20" cols="100" onclick="this.value=''" placeholder="必填" wrap="physical" >
+						</textarea>
+					</td>
+					<tr>
+			</table>
+		</div>
+		<!-- 一条记录 结束 -->
+		<!-- 一条记录 开始 -->
+		<div id="main">
+			<div class="tit" align="center">
+				<h2>项目经验</h2>
+				<div class="titText"></div>
+			</div>
+			<table class="myInfo" align="center">
+				<tr>
+					<th>项目名称：</th>
+					<td>
+						<input type="text" name="text1" onclick="this.value=''" value="必填" />
+					</td>
+				</tr>
+				<tr>
+					<th>项目时间：</th>
+					<td>
+						<select name="time1" id="select">
+							<option>2014年</option>
+							<option>2015年</option>
+							<option>2016年</option>
+							<option>2017年</option>
+							<option>2018年</option>
+							<option>其他</option>
+						</select>
+						<select name="time2" id="select">
+							<option>1月</option>
+							<option>2月</option>
+							<option>3月</option>
+							<option>4月</option>
+							<option>5月</option>
+							<option>6月</option>
+							<option>7月</option>
+							<option>8月</option>
+							<option>9月</option>
+							<option>10月</option>
+							<option>11月</option>
+							<option>12月</option>
+						</select>
+						-
+						<select name="time3" id="select">
+							<option>2014年</option>
+							<option>2015年</option>
+							<option>2016年</option>
+							<option>2017年</option>
+							<option>2018年</option>
+							<option>其他</option>
+						</select>
+						<select name="time4" id="select">
+							<option>1月</option>
+							<option>2月</option>
+							<option>3月</option>
+							<option>4月</option>
+							<option>5月</option>
+							<option>6月</option>
+							<option>7月</option>
+							<option>8月</option>
+							<option>9月</option>
+							<option>10月</option>
+							<option>11月</option>
+							<option>12月</option>
+						</select>
+						<input type="checkbox" />至今
+					</td>
+				</tr>
+				<tr>
+					<th>项目描述：</th>
+					<td>
+						<textarea rows="20" cols="100" onclick="this.value=''" placeholder="更完善的项目信息有助于快速找到你" wrap="physical">
+							
+						</textarea>
+					</td>
+				</tr>
+				<tr>
+					<th>个人职责：</th>
+					<td>
+						<textarea rows="20" cols="100" onclick="this.value=''"  placeholder="更完善的工作信息有助于提升你的竞争力" wrap="physical">
+							
+						</textarea>
+					</td>
+				</tr>
+				<tr>
+					<th>所属公司：</th>
+					<td>
+						<input type="text" name="text1" value="选填" onclick="this.value=''" />
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!-- 一条记录 结束 -->
+		<!-- 一条记录 开始 -->
+		<div id="main">
+			<div class="tit" align="center">
+				<h2>教育经历</h2>
+				<div class="titText"></div>
+			</div>
+			<table class="myInfo" align="center">
+				<tr>
+					<th>学校名称：</th>
+					<td>
+						<input type="text" name="text1" onclick="this.value=''" value="必填" />
+					</td>
+				</tr>
+				<tr>
+					<th>就读时间：</th>
+					<td>
+						<select name="time1" id="select">
+							<option>2014年</option>
+							<option>2015年</option>
+							<option selected="selected">2016年</option>
+							<option>2017年</option>
+							<option>2018年</option>
+							<option>其他</option>
+						</select>
+						<select name="time2" id="select">
+							<option>1月</option>
+							<option>2月</option>
+							<option>3月</option>
+							<option>4月</option>
+							<option>5月</option>
+							<option>6月</option>
+							<option>7月</option>
+							<option>8月</option>
+							<option selected="selected">9月</option>
+							<option>10月</option>
+							<option>11月</option>
+							<option>12月</option>
+						</select>
+						-
+						<select name="time3" id="select">
+							<option>2014年</option>
+							<option>2015年</option>
+							<option>2016年</option>
+							<option>2017年</option>
+							<option selected="selected">2018年</option>
+							<option>2019年</option>
+							<option>2020年</option>
+							<option>其他</option>
+						</select>
+						<select name="time4" id="select">
+							<option selected="selected"> </option>
+							<option>1月</option>
+							<option>2月</option>
+							<option>3月</option>
+							<option>4月</option>
+							<option>5月</option>
+							<option>6月</option>
+							<option>7月</option>
+							<option>8月</option>
+							<option>9月</option>
+							<option>10月</option>
+							<option>11月</option>
+							<option>12月</option>
+						</select>
+						<input type="checkbox" checked="checked"/>至今
+					</td>
+				</tr>
+				<tr>
+					<th>所学专业：</th>
+					<td>
+						<input type="text" name="text1" value="请输入专业名称" onclick="this.value=''" />
+					</td>
+				</tr>
+				<tr>
+					<th>是否统招：</th>
+					<td>
+						<input type="radio" name="radio" value="yes" checked="checked" />是
+						<input type="radio" name="radio" value="no" />否
+					</td>
+				</tr>
+				<tr>
+					<th>学历/学位：</th>
+					<td>
+						<select name="xl" id="select">
+							<option>高中</option>
+							<option>大专</option>
+							<option selected="selected">本科</option>
+							<option>研究生</option>
+							<option>其他</option>
+						</select>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!-- 一条记录 结束 -->
+		<!-- 一条记录 开始 -->
+		<div id="main">
+			<div class="tit" align="center">
+				<h2>培训经历</h2>
+				<div class="titText"></div>
+			</div>
+			<table class="myInfo" align="center">
+				<tr>
+					<th>培训时间：</th>
+					<td>
+						<select name="time1" id="select">
+							<option>2014年</option>
+							<option>2015年</option>
+							<option>2016年</option>
+							<option>2017年</option>
+							<option>2018年</option>
+							<option>其他</option>
+						</select>
+						<select name="time2" id="select">
+							<option>1月</option>
+							<option>2月</option>
+							<option>3月</option>
+							<option>4月</option>
+							<option>5月</option>
+							<option>6月</option>
+							<option>7月</option>
+							<option>8月</option>
+							<option>9月</option>
+							<option>10月</option>
+							<option>11月</option>
+							<option>12月</option>
+						</select>
+						-
+						<select name="time3" id="select">
+							<option>2014年</option>
+							<option>2015年</option>
+							<option>2016年</option>
+							<option>2017年</option>
+							<option>2018年</option>
+							<option>2019年</option>
+							<option>2020年</option>
+							<option>其他</option>
+						</select>
+						<select name="time4" id="select">
+							<option>1月</option>
+							<option>2月</option>
+							<option>3月</option>
+							<option>4月</option>
+							<option>5月</option>
+							<option>6月</option>
+							<option>7月</option>
+							<option>8月</option>
+							<option>9月</option>
+							<option>10月</option>
+							<option>11月</option>
+							<option>12月</option>
+						</select>
+						<input type="checkbox" />至今
+					</td>
+				</tr>
+				<tr>
+					<th>培训机构：</th>
+					<td>
+						<input type="text" name="text1" onclick="this.value=''" value="必填" />
+					</td>
+				</tr>
+				<tr>
+					<th>培训课程：</th>
+					<td>
+						<input type="text" name="text1" onclick="this.value=''" value="必填" />
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!-- 一条记录 结束 -->
+		<!-- 一条记录 开始 -->
+		<div id="main">
+			<div class="tit" align="center">
+				<h2>语言能力</h2>
+				<div class="titText"></div>
+			</div>
+			<table class="myInfo" align="center">
+				<tr>
+					<th>语种：</th>
+					<td>
+						<select name="language" id="select">
+							<option>英语</option>
+							<option>日语</option>
+							<option>法语</option>
+							<option>德语</option>
+							<option>韩语</option>
+							<option>其他</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th>听说能力：</th>
+					<td>
+						<input type="radio" name="radio" />一般
+						<input type="radio" name="radio" checked="checked"/>良好
+						<input type="radio" name="radio" />熟练
+						<input type="radio" name="radio" />精通
+					</td>
+				</tr>
+				<tr>
+					<th>读写能力：</th>
+					<td>
+						<input type="radio" name="radio" />一般
+						<input type="radio" name="radio" checked="checked" />良好
+						<input type="radio" name="radio" />熟练
+						<input type="radio" name="radio" />精通
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!-- 一条记录 结束 -->
+		<!-- 一条记录 开始 -->
+		<div id="main">
+			<div class="tit" align="center">
+				<h2>证书</h2>
+				<div class="titText"></div>
+			</div>
+			<table class="myInfo" align="center">
+				<tr>
+					<th>证书名称：</th>
+					<td>
+						<input type="text" name="text1" onclick="this.value=''" value="必填" />
+					</td>
+				</tr>
+				<tr>
+					<th>获得时间：</th>
+					<td>
+						<select name="time1" id="select">
+							<option>2014年</option>
+							<option>2015年</option>
+							<option>2016年</option>
+							<option>2017年</option>
+							<option>2018年</option>
+							<option>2019年</option>
+							<option>2020年</option>
+							<option>其他</option>
+						</select>
+						<select name="time2" id="select">
+							<option>1月</option>
+							<option>2月</option>
+							<option>3月</option>
+							<option>4月</option>
+							<option>5月</option>
+							<option>6月</option>
+							<option>7月</option>
+							<option>8月</option>
+							<option>9月</option>
+							<option>10月</option>
+							<option>11月</option>
+							<option>12月</option>
+						</select>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!-- 一条记录 结束 -->
+		<!-- 一条记录 开始 -->
+		<div id="main">
+			<div class="tit" align="center">
+				<h2>自我评价</h2>
+				<div class="titText"></div>
+			</div>
+			<table class="myInfo" align="center">
+				<tr>
+					<th>评价内容：</th>
+					<td>
+						<textarea rows="20" cols="100" onclick="this.value=''"  placeholder="建议您做一个简短评价，简明扼要地描述您的职业优势，让用人单位快速的了解您！优秀的自我评价可以吸引招聘人员的眼球，为您的简历增色不少！" wrap="physical">
+							
+						</textarea>
+					</td>
+				</tr>
+					<tr>
+						<th>上传简历：</th>
+						<td>
+							<input type="file" name="fileField" id="fileField" />
+						</td>
+					</tr>
+					<tr align="center">
+						<td colspan="2">
+								<hr class="line" />
+								<a href="我的简历.html" class="a1" onclick="script:alert('操作成功')">完成</a>
+								<a href="#" class="a2">以后再说</a>
+						</td>
+					</tr>
+			</table>
+		</div>
+		<!-- 一条记录 结束 -->
+		</div>
+
+		<div id="f1">Copyright 2012 itmag.com All rights reserved. | 苏ICP备12067872号 </div>
+	</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>视频</title>
+		<style type="text/css">
+			body{
+				background-color:powderblue;
+			}
+			.c{
+				width:600px;
+				margin-left: 28%;
+				margin-right: 72%;
+				font-family: "微软雅黑";
+				font-size: 5px;
+				background-color: palegreen;
+			}
+		</style>
+	</head>
+	<body>
+		<div style="text-align: center;">
+			<video id="video1" width="600" height="500">
+				<source src="myvideo.mp4" type="video/mp4"></source>
+				<source src="myvideo.ogg" type="video/ogg"></source>
+				<source src="myvideo.webm" type="video/webm"></source>
+				<object width="400" height="300" type="application/x-shockwave-flash" data="myvideo.swf">
+				<param name="movie" value="myvideo.swf" />
+				<param name="flashvars" value="autostart=true&amp;file=myvideo.swf" />
+			</object> 当前浏览器不支持 video直接播放，点击这里下载视频：
+				<a href="myvideo.webm">下载视频</a>
+			</video>
+			<br>
+			<button onclick="playPause()">播放/暂停</button>
+			<div class="c">
+				由于找不到与项目对应的视频素材，所以应用了本身有的视频，请见谅！
+			</div>
+		</div>
+		<script type="text/javascript">
+			var myVideo = document.getElementById("video1");
+			function playPause() {
+				if(myVideo.paused)
+					myVideo.play();
+				else
+					myVideo.pause();
+			}
+		</script>
+	</body>
+</html>
