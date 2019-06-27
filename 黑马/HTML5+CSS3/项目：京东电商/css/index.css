@@ -1,0 +1,278 @@
+/*中间分类模块*/
+.grid{
+	height: 480px;
+	background-color: #FEFEFE;
+}
+.grid a:hover{
+	color: #e33333;
+}
+
+
+.gird-col1{
+	width: 190px;
+	height: 100%;
+	color: #636363;
+}
+.gird-col1 ul{
+	padding: 6px 0;
+}
+.gird-col1 ul li{
+	height: 26px;
+	padding-left: 18px;
+}
+.gird-col1 ul li:hover{
+	background-color: #d9d9d9;
+}
+.gird-col1 a{
+	color: #626262;
+	font-size: 14px;
+}
+.gird-col1 span{
+	font-size: 12px;
+	padding: 0 2px;
+}
+
+
+.gird-col2{
+	width: 590px;
+	margin: 10px 10px 0 10px;
+	position: relative;
+}
+/*箭头部分*/
+.arrow-l,.arrow-r{
+	position: absolute;
+	top: 50%;
+	width: 24px;
+	height: 40px;
+	background-color: red;
+	transform: translateY(-50%);
+	margin-top: -15px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 20px;
+	font-family: arial;
+	font-weight: normal;
+	background-color: rgba(0, 0, 0, 0.2);
+	color: rgba(255, 255, 255, 0.4);	
+}
+.arrow-r{
+	right: 0;
+}
+.gird-col2 .arrow-l:hover{
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.gird-col2 .arrow-r:hover{
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+/*轮播小圆圈*/
+.circle{
+	width: 152px;
+	height: 18px;
+	position: absolute;
+	left: 46px;
+	bottom: 30px;
+}
+.circle li{
+	width: 6px;
+	height: 6px;
+	float: left;
+	margin: 4px;
+	border: 2px solid rgba(255,255,255,.4);
+	border-radius: 50%;
+	cursor: pointer;   /*鼠标经过li的时候变成小手*/
+}
+.circle .current,.circle li:hover{
+	background-color: #fff;
+	box-shadow: 0px 0px 4px 6px rgba(255, 255, 255,.2);
+}
+
+
+.gird-col3{
+	width: 190px;
+	height: 100%;
+	margin-right: 10px;
+}
+.gird-col3 img{
+	margin-top: 10px;
+}
+
+
+.gird-col4{
+	width: 190px;
+	height: 480px;
+}
+/*登陆模块*/
+.login{
+	height: 140px;
+	margin-top: 10px;
+	position: relative;
+}
+.login-t .user-info{
+	display: block;
+	width: 65px;
+	height: 65px;
+	position: absolute;
+	left: 60px;
+	top: -5px;
+	text-align: center;
+}
+.login-t .user-info img{
+	box-shadow: 0px 0px 4px 10px rgba(123,123,123,.2);
+	width: 55px;
+	height: 55px;
+	border-radius: 50%;
+}
+.login-b{
+	font-size: 12px;
+	padding-top: 65px;
+}
+.login-b .p1,
+.login-b .p2{
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+	color: #888;
+}
+.login-b .p2 a{
+	color: #666;
+}
+.login-b .p2 a:hover{
+	color: #c81623;
+}
+.login-b .p3{
+	height: 25px;
+	margin-top: 10px;
+	text-align: center;
+}
+.login-b .p3 a{
+	display: inline-block;
+	width: 70px;
+	height: 25px;
+	margin: 0 5px;
+	border-radius: 13px;
+	line-height: 25px;
+}
+.login-b .p3 .a1{
+	background-color: #f0f3ef;
+	color: #e43f3b;
+}
+.login-b .p3 .a2{
+	background-color: #363634;
+	color: #e5d790;
+}
+.login-b .p3 a:hover{
+    background-color: #e01222;
+    color: #fff;
+}
+
+/*京东快报模块*/
+.gird-col4 .news{
+	height: 130px;
+	border-bottom:1px solid #CCCCCC;
+}
+.news-t{
+	font-size: 13px;
+	height: 19px;
+	margin-top: 8px;
+	line-height: 13px;
+	position: relative;
+}
+.news-t h5{
+	display: inline-block;
+	width: 52px;
+	height: 13px;
+	margin-left: 15px;
+	font-size: 13px;
+}
+.news-t a{
+	position: absolute;
+	right: 12px;
+	color: #666;
+}
+.news-t a:hover{
+	color: currentcolor;
+}
+.news-t i{
+	font-family: "icomoon";
+	font-style: normal;
+	color: #ccc;
+}
+.news-b{
+	margin: 0 15px;
+	padding-top: 8px;
+}
+.news-b li{
+	width: 160px;
+	height: 21px;
+	line-height: 21px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.news-b li a{
+	color: #666;
+}
+.news-b li a:hover{
+	color: #c81623;
+}
+.news-b .news-tag{
+	display: inline-block;
+	width: 35px;
+	height: 16px;
+	margin-right: 6px;
+	line-height: 16px;
+	color: #fff;
+	background-color: #e47f7f;
+	border-radius: 2px;
+	text-align: center;
+}
+
+/*服务扩展模块*/
+.gird-col4 .expand{
+	height: 194px;
+	padding: 18px 11px 11px 11px;
+	box-sizing: border-box;
+}
+.expand li{
+	width: 42px;
+	height: 55px;
+	float: left;
+	text-align: center;
+}
+.expand li a{
+	display: block;
+	width: 42px;
+	height: 51px;
+	padding-top: 6px;
+	color: #bea68d;
+}
+.expand li a:hover,
+.expand li span:hover{
+	color: #c81623;
+}
+.expand li i{
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin: 4px auto 0;
+	font-family: "icomoon";
+	font-style: normal;
+	font-size: 16px;
+}
+
+
+
+
+
+
+
+
+.expand li span{
+	display: block;
+	height: 25px;
+	line-height: 25px;
+	border-bottom: 2px solid #fff;
+    color: #bea68d;
+}
